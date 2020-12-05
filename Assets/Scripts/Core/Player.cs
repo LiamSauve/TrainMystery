@@ -40,12 +40,12 @@ public class Player : TimeScaleIndependentUpdate
     void LookForObjectInFront()
     {
         // check timer
-        //if(_checkFacedObjectTimer > 0)
-        //{
-        //    _checkFacedObjectTimer -= deltaTime;
-        //    return;
-        //}
-        //_checkFacedObjectTimer = _checkFacedObjectMax;
+        if(_checkFacedObjectTimer > 0)
+        {
+            _checkFacedObjectTimer -= deltaTime;
+            return;
+        }
+        _checkFacedObjectTimer = _checkFacedObjectMax;
 
         // look for object
         LayerMask interactableMask = LayerMask.GetMask("Interactable");
@@ -78,6 +78,8 @@ public class Player : TimeScaleIndependentUpdate
             Debug.Log("nothing to interact with");
             return;
         }
+
+        interactable.Interact();
 
         Debug.Log( "interacted with: " + interactable );
         
