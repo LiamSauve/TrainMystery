@@ -372,7 +372,10 @@ public class FirstPersonAIO : MonoBehaviour {
             else if(Input.GetKeyDown(_crouchModifiers.crouchKey)){isCrouching = !isCrouching || _crouchModifiers.crouchOverride;}
             }
 
-        if(Input.GetButtonDown("Cancel")){ControllerPause();}
+        if(TrainMystery.TrainMysteryGameManager.Instance.GetGameState() == TrainMystery.GameState.running)
+        {
+            if(Input.GetButtonDown("Cancel")){ControllerPause();}
+        }
         #endregion
 
         #region Movement Settings - Update
