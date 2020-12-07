@@ -1,52 +1,80 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
-public enum GameState
+namespace TrainMystery
 {
-    running = 0,
-    dialogue = 1,
-    menu = 2
-}
 
-public class TrainMysteryGameManager : MonoBehaviour
-{
-    private static TrainMysteryGameManager _instance;
-    public static TrainMysteryGameManager Instance { get { return _instance; } }
-
-    private GameState state = GameState.running;
-
-    private void Awake()
+    public enum GameState
     {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
+        running = 0,
+        dialogue = 1,
+        menu = 2
     }
 
-    public bool IsPaused()
+    public class TrainMysteryGameManager : MonoBehaviour
     {
-        bool isPaused = false;
-        switch(_instance.state)
+        public static TrainMysteryGameManager Instance { get { return _instance; } }
+
+        private static TrainMysteryGameManager _instance;
+        private GameState _state = GameState.running;
+        [SerializeField]
+        private GameObject _player;
+
+        private void Awake()
         {
-            case GameState.dialogue:
-            case GameState.menu:
-                isPaused = true;
-                break;
-            default:
-                isPaused = false;
-                break;
+            if (_instance != null && _instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                _instance = this;
+            }
         }
 
-        return isPaused;
-    }
+        public bool IsPaused()
+        {
+            bool isPaused = false;
+            switch (_instance._state)
+            {
+                case GameState.dialogue:
+                case GameState.menu:
+                    isPaused = true;
+                    break;
+                default:
+                    isPaused = false;
+                    break;
+            }
 
-    public GameState GetGameState()
-    {
-        return state;
-    }
+            return isPaused;
+        }
+
+        public void SetGameState(GameState gameState)
+        {
+            _state = gameState;
+        }
+
+        public GameState GetGameState()
+        {
+            return _state;
+        }
+
+        public void PausePlayerController()
+        {
+            var fpsController = _player.GetComponent<FirstPersonAIO>();
+            if(fpsController.controllerPauseState == true)
+            {
+                return;
+            }
+
+            fpsController.ControllerPause();
+        }
+
+        public void UnpausePlayerController()
+        {
+            _player.GetComponent<FirstPersonAIO>().ControllerPause();
+        }
+    } 
 }

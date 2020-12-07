@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 289dbe3251c79b14bbb5d34290f21149
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-CA
+  stringIDs:
+  - Chase-Chase-0
+  - Chase-Chase-1
+  - Chase-Chase-2
+  - Chase-Chase-3
+  - Chase-Chase-4
+  - Chase-Kerdunkerchud-5
+  - Chase-Bananaclock-6
+  - Chase-Frim-7
+  - Chase-Bye-8
+  - Chase-Bye-9
+  - Chase-Repeat-10
+  - Chase-Repeat-11
+  - Chase-Repeat-12
+  - Chase-Repeat-13
+  - Chase-Repeat-14
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 'Error on line 17 at position 17:token recognition error
+    at: ''[''
+
+'
+  baseLanguage: {fileID: 7128917941130120860, guid: 289dbe3251c79b14bbb5d34290f21149,
+    type: 3}
+  localizations: []

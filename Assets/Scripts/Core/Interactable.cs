@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Interactable : TimeScaleIndependentUpdate
+namespace TrainMystery
 {
-    public abstract void Interact();
+    public abstract class Interactable : TimeScaleIndependentUpdate
+    {
+        public abstract void Interact();
+    } 
 }

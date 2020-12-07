@@ -1,48 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TimeScaleIndependentUpdate : MonoBehaviour
+namespace TrainMystery
 {
-    public bool pauseWhenGameIsPaused = true;
-    float previousTimeSinceStartup;
-
-    public float deltaTime { get; private set; }
-
-    protected virtual void Awake()
+    public class TimeScaleIndependentUpdate : MonoBehaviour
     {
-        previousTimeSinceStartup = Time.realtimeSinceStartup;
-    }
+        public bool pauseWhenGameIsPaused = true;
+        float previousTimeSinceStartup;
 
-    protected virtual void Update()
-    {
-        float realtimeSinceStartup = Time.realtimeSinceStartup;
-        deltaTime = realtimeSinceStartup - previousTimeSinceStartup;
-        previousTimeSinceStartup = realtimeSinceStartup;
+        public float deltaTime { get; private set; }
 
-        //It is possible (especially if this script is attached to an object that is 
-        //created when the scene is loaded) that the calculated delta time is 
-        //less than zero.  In that case, discard this update.
-        if (deltaTime < 0)
+        protected virtual void Awake()
         {
-            //Debug.LogWarning("Delta time less than zero, discarding (delta time was " + deltaTime + ")");
-            deltaTime = 0;
+            previousTimeSinceStartup = Time.realtimeSinceStartup;
         }
 
-        //NOTE: You will want to change "GameStateManager.SharedInstance.Paused()" 
-        //to whatever you use to check if the game has been paused by the user
-        if (pauseWhenGameIsPaused && TrainMysteryGameManager.Instance.IsPaused() )
+        protected virtual void Update()
         {
-            deltaTime = 0;
-        }
-    }
+            float realtimeSinceStartup = Time.realtimeSinceStartup;
+            deltaTime = realtimeSinceStartup - previousTimeSinceStartup;
+            previousTimeSinceStartup = realtimeSinceStartup;
 
-    public IEnumerator TimeScaleIndependentWaitForSeconds(float seconds)
-    {
-        float elapsedTime = 0;
-        while (elapsedTime < seconds)
-        {
-            yield return null;
-            elapsedTime += deltaTime;
+            //It is possible (especially if this script is attached to an object that is 
+            //created when the scene is loaded) that the calculated delta time is 
+            //less than zero.  In that case, discard this update.
+            if (deltaTime < 0)
+            {
+                //Debug.LogWarning("Delta time less than zero, discarding (delta time was " + deltaTime + ")");
+                deltaTime = 0;
+            }
+
+            //NOTE: You will want to change "GameStateManager.SharedInstance.Paused()" 
+            //to whatever you use to check if the game has been paused by the user
+            if (pauseWhenGameIsPaused && TrainMysteryGameManager.Instance.IsPaused())
+            {
+                deltaTime = 0;
+            }
         }
-    }
+
+        public IEnumerator TimeScaleIndependentWaitForSeconds(float seconds)
+        {
+            float elapsedTime = 0;
+            while (elapsedTime < seconds)
+            {
+                yield return null;
+                elapsedTime += deltaTime;
+            }
+        }
+    } 
 }

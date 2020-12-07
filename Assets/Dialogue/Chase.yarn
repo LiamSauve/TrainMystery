@@ -1,0 +1,54 @@
+title: Chase
+tags: 
+colorID: 0
+position: 694,-695
+---
+Me Chase Barkley. Me Repeat things.
+[[Say "Kerdunkerchud"|Kerdunkerchud]]
+[[Say "Bananaclock"|Bananaclock]]
+[[Say "Frim Fram Frappe"|Frim]]
+[[Nevermind|Bye]]
+===
+title: Kerdunkerchud
+tags: 
+colorID: 0
+position: 1596,-707
+---
+Kerdunkerchud!
+[[Repeat]]
+===
+title: Bananaclock
+tags: 
+colorID: 0
+position: 1602,-497
+---
+Bananaclock!
+[[Repeat]]
+===
+title: Frim
+tags: 
+colorID: 0
+position: 1601,-278
+---
+Frim Fram Frappe!
+[[Repeat]]
+===
+title: Bye
+tags: 
+colorID: 0
+position: 1603,-61
+---
+Bye bye
+Chase love you.
+===
+title: Repeat
+tags: 
+colorID: 0
+position: 695,-268
+---
+Now what say?
+[[Say "Kerdunkerchud"|Kerdunkerchud]]
+[[Say "Bananaclock"|Bananaclock]]
+[[Say "Frim Fram Frappe"|Frim]]
+[[Nevermind|Bye]]
+===

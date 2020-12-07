@@ -1,24 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Yarn.Unity;
+﻿using Yarn.Unity;
 
-public class NPC : Interactable
+namespace TrainMystery
 {
-    public YarnProgram yarnProgram;
-
-    private void Start()
+    public class NPC : Interactable
     {
-        if (yarnProgram != null)
+        public string startNode;
+        public YarnProgram yarnProgram;
+
+        private void Start()
         {
-            DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-            dialogueRunner.Add(yarnProgram);
+            if (yarnProgram != null)
+            {
+                DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+                dialogueRunner.Add(yarnProgram);
+            }
         }
-    }
 
-    public override void Interact()
-    {
-        //FindObjectOfType<DialogueRunner>().StartDialogue("Start");
-        Debug.Log("Interacting with me!");
-    }
+        public override void Interact()
+        {
+            FindObjectOfType<DialogueRunner>().StartDialogue(startNode);
+        }
+    } 
 }

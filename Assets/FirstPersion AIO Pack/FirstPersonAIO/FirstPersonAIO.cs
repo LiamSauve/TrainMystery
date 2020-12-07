@@ -337,7 +337,6 @@ public class FirstPersonAIO : MonoBehaviour {
     private void Update(){
 
         #region Look Settings - Update
-
             if(enableCameraMovement && !controllerPauseState){
             float mouseYInput = 0;
             float mouseXInput = 0;

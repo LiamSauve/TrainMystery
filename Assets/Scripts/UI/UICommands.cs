@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UICommands : MonoBehaviour
+namespace TrainMystery
 {
-    [SerializeField]
-    private TMP_Text _facedObjectLabel;
-
-    public void SetFacedObjectLabel(string facedObjectName)
+    public class UICommands : MonoBehaviour
     {
-        _facedObjectLabel.text = facedObjectName;
+        [SerializeField]
+        private TMP_Text _facedObjectLabel;
+
+        public void SetFacedObjectLabel(string facedObjectName)
+        {
+            _facedObjectLabel.text = facedObjectName;
+        }
     }
 }

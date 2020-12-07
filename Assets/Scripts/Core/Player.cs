@@ -2,104 +2,109 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : TimeScaleIndependentUpdate
+namespace TrainMystery
 {
-    private Interactable _facedInteractable;
-
-    [SerializeField]
-    private Camera _camera;
-    [SerializeField]
-    private UICommands _uiCommands;
-
-    [SerializeField]
-    private float _checkFacedObjectTimer = 1f;
-    [SerializeField]
-    private float _checkFacedObjectMax = 1f;
-
-    void Start()
+    public class Player : TimeScaleIndependentUpdate
     {
-        
-    }
+        private Interactable _facedInteractable;
 
-    protected override void Update()
-    {
-        base.Update();
+        [SerializeField]
+        private Camera _camera;
+        [SerializeField]
+        private UICommands _uiCommands;
 
-        UpdateInput();
-        LookForObjectInFront();
-    }
+        [SerializeField]
+        private float _checkFacedObjectTimer = 1f;
+        [SerializeField]
+        private float _checkFacedObjectMax = 1f;
 
-    void UpdateInput()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
+        void Start()
         {
-            Interact();
+
         }
-    }
 
-    void LookForObjectInFront()
-    {
-        // check timer
-        if(_checkFacedObjectTimer > 0)
+        protected override void Update()
         {
-            _checkFacedObjectTimer -= deltaTime;
-            return;
+            base.Update();
+
+            UpdateInput();
+            LookForObjectInFront();
         }
-        _checkFacedObjectTimer = _checkFacedObjectMax;
 
-        // look for object
-        LayerMask interactableMask = LayerMask.GetMask("Interactable");
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        RaycastHit hit;
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask))
+        void UpdateInput()
         {
-            //Debug.Log(hit.collider.gameObject);
-
-            // set inter
-            var interactable = hit.collider.gameObject.GetComponent<Interactable>() != null ? hit.collider.gameObject.GetComponent<Interactable>() : null ;
-            if(interactable != _facedInteractable)
+            if(TrainMysteryGameManager.Instance.GetGameState() != GameState.running)
             {
-                _facedInteractable = interactable;
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
+        }
+
+        void LookForObjectInFront()
+        {
+            // check timer
+            if (_checkFacedObjectTimer > 0)
+            {
+                _checkFacedObjectTimer -= deltaTime;
+                return;
+            }
+            _checkFacedObjectTimer = _checkFacedObjectMax;
+
+            // look for object
+            LayerMask interactableMask = LayerMask.GetMask("Interactable");
+            Ray ray = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            RaycastHit hit;
+            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask))
+            {
+                //Debug.Log(hit.collider.gameObject);
+
+                // set inter
+                var interactable = hit.collider.gameObject.GetComponent<Interactable>() != null ? hit.collider.gameObject.GetComponent<Interactable>() : null;
+                if (interactable != _facedInteractable)
+                {
+                    _facedInteractable = interactable;
+                    DisplayObjectName();
+                }
+            }
+            else
+            {
+                _facedInteractable = null;
                 DisplayObjectName();
             }
         }
-        else
-        {
-            _facedInteractable = null;
-            DisplayObjectName();
-        }
-    }
 
-    void Interact()
-    {
-        var interactable = this.GetInteractable();
-        if(!interactable)
+        void Interact()
         {
-            Debug.Log("nothing to interact with");
-            return;
+            var interactable = this.GetInteractable();
+            if (!interactable)
+            {
+                Debug.Log("nothing to interact with");
+                return;
+            }
+
+            interactable.Interact();
         }
 
-        interactable.Interact();
-
-        Debug.Log( "interacted with: " + interactable );
-        
-    }
-
-    Interactable GetInteractable()
-    {
-        return _facedInteractable;
-    }
-
-    void DisplayObjectName()
-    {
-        if(_facedInteractable == null)
+        Interactable GetInteractable()
         {
-            _uiCommands.SetFacedObjectLabel(string.Empty);
-        }
-        else
-        {
-            _uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name);
+            return _facedInteractable;
         }
 
-    }
+        void DisplayObjectName()
+        {
+            if (_facedInteractable == null)
+            {
+                _uiCommands.SetFacedObjectLabel(string.Empty);
+            }
+            else
+            {
+                _uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name);
+            }
+
+        }
+    } 
 }
