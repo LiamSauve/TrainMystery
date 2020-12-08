@@ -17,10 +17,12 @@ namespace TrainMystery
         private float _checkFacedObjectTimer = 1f;
         [SerializeField]
         private float _checkFacedObjectMax = 1f;
+        [SerializeField]
+        private PlayerGun _playerGun;
 
         void Start()
         {
-
+            AkSoundEngine.PostEvent("Play_sfx_train_interior", Camera.main.gameObject);
         }
 
         protected override void Update()
@@ -41,11 +43,6 @@ namespace TrainMystery
             if (Input.GetKeyDown(KeyCode.E))
             {
                 AttemptInteract();
-            }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                Footstep();
             }
         }
 
@@ -104,7 +101,7 @@ namespace TrainMystery
             }
             else
             {
-                _uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name);
+                _uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name + " <sprite=0>");
             }
 
         }
@@ -117,6 +114,7 @@ namespace TrainMystery
         public void EquipGun()
         {
             // show gun in hud/screen
+            _playerGun.Equip(true);
         }
     } 
 }

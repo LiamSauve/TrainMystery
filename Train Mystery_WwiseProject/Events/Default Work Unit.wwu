@@ -39,12 +39,19 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_TESTEST" ID="{BD4B2095-CAFB-4C8C-92D7-C46DB90C2CF3}">
+				<Event Name="Play_sfx_train_interior" ID="{F9BAB28E-23EA-4EDA-89F3-DD119BD749B5}">
 					<ChildrenList>
-						<Action Name="" ID="{453B97B2-35B1-4A49-AEB5-C9A9FBC7450F}" ShortID="16506031">
+						<Action Name="" ID="{66EA71F0-C332-4551-BBA4-8393399967D7}" ShortID="1031591696">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Carpet-11" ID="{A4DDE876-9564-4FE5-8897-830FA6557882}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+									<ObjectRef Name="sfx_train_interior_0" ID="{626F581B-3512-486E-BA71-7C3A80490912}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D9365AAA-31F8-4C5B-84DA-ED33A02F5DCD}" ShortID="619309973">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_train_interior_1" ID="{5AE996A4-2BC3-45E0-8FBA-0FCA26CF97BD}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

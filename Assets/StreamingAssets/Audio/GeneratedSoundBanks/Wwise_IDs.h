@@ -16,7 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_MUS_RADIO = 2966579327U;
         static const AkUniqueID PLAY_SFX_FOOTSTEP = 57417936U;
         static const AkUniqueID PLAY_SFX_RADIO_CLICK = 2633069342U;
-        static const AkUniqueID PLAY_TESTEST = 1663437058U;
+        static const AkUniqueID PLAY_SFX_TRAIN_INTERIOR = 4166342023U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

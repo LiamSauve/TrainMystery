@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{9747C29B-AE29-4CF0-B7D2-9B5BBE370D29}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{9747C29B-AE29-4CF0-B7D2-9B5BBE370D29}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{9747C29B-AE29-4CF0-B7D2-9B5BBE370D29}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="RadioDistorion" ID="{A1076BE8-F24D-4147-B860-8F63DE29C2D0}" PluginName="iZotope Trash Distortion" CompanyID="259" PluginID="3" PluginType="3">
+					<PropertyList>
+						<Property Name="Distortion1Mix" Type="Real32" Value="69"/>
+						<Property Name="Distortion1Type" Type="int32" Value="26"/>
+						<Property Name="Distortion2Overdrive" Type="Real32" Value="6"/>
+						<Property Name="Distortion2Trash" Type="Real32" Value="0.7"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="distoriton" ID="{ECA7A4F6-8BC9-4FBB-9A26-1B472A8C4635}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="20"/>
+						<Property Name="DistortionTone" Type="Real32" Value="0"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+						<Property Name="PreEQBand1Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand1FilterType" Type="int32" Value="4"/>
+						<Property Name="PreEQBand1Frequency" Type="Real32" Value="490"/>
+						<Property Name="PreEQBand1Gain" Type="Real32" Value="-12"/>
+						<Property Name="PreEQBand2Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand2FilterType" Type="int32" Value="1"/>
+						<Property Name="PreEQBand2Gain" Type="Real32" Value="1"/>
+						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand3FilterType" Type="int32" Value="3"/>
+						<Property Name="PreEQBand3Frequency" Type="Real32" Value="1502"/>
+						<Property Name="PreEQBand3Gain" Type="Real32" Value="-0.5"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

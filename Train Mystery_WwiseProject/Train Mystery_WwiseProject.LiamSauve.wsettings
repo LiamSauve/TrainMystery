@@ -5,6 +5,7 @@
 			<PropertyList>
 				<Property Name="Event Action List\{21678467-DF76-4146-897D-96608DBD030D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2D6A8623-06E4-45D9-9738-1B8AC0716400}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{57662D41-C68F-4027-8E7A-861B4489C43F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{6EF16F88-9830-43EB-A278-4D29CB240851}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{764298FA-3362-4662-A0C2-AA6C42C45AE6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BD4B2095-CAFB-4C8C-92D7-C46DB90C2CF3}\x64_Expand States" Type="string" Value=""/>
@@ -13,6 +14,7 @@
 				<Property Name="Event Action List\{C96CE9C7-40B8-49C6-B808-AF0839C3412B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D42ABD21-4792-4118-92D3-23DD1B476B7E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{EEC0AB66-2F7B-43DF-BC62-BC01F18EA16A}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F9BAB28E-23EA-4EDA-89F3-DD119BD749B5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -43,6 +45,7 @@
 				<Property Name="Mixing Desk\LastSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFilterVersion" Type="int32" Value="1"/>
 				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value=""/>
+				<Property Name="PluginUserAcknowledge\iZotope Trash Distortion" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
@@ -74,7 +77,6 @@
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="G015kusgakO+jIviM6HXiw=="/>
 				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="..\Assets\StreamingAssets\Audio\GeneratedSoundBanks"/>
-				<Property Name="SoundBankPathUserOverride" Type="bool" Value="True"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Mac">..\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</Value>

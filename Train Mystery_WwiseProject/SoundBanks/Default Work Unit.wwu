@@ -8,7 +8,7 @@
 						<ObjectRef Name="Play_sfx_footstep" ID="{21678467-DF76-4146-897D-96608DBD030D}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_radio_click" ID="{C75A85B8-BE6D-43A3-A5F8-26BB8ACAA564}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_mus_radio" ID="{6EF16F88-9830-43EB-A278-4D29CB240851}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_TESTEST" ID="{BD4B2095-CAFB-4C8C-92D7-C46DB90C2CF3}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_train_interior" ID="{F9BAB28E-23EA-4EDA-89F3-DD119BD749B5}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -10,13 +10,8 @@ namespace TrainMystery
         private uint mainSoundbankID;
         void Awake()
         {
-            //Debug.Log("====");
-            //Debug.Log(mainSoundbankID);
             AkSoundEngine.LoadBank("Init", out initSoundbankID);
             AkSoundEngine.LoadBank("Main", out mainSoundbankID);
-
-            //Debug.Log(mainSoundbankID);
-            //Debug.Log("====");
         }
     } 
 }

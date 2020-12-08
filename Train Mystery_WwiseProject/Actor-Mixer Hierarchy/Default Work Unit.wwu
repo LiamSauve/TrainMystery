@@ -54,7 +54,7 @@
 													</Point>
 													<Point>
 														<XPos>1</XPos>
-														<YPos>0</YPos>
+														<YPos>-11.42783</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -69,6 +69,9 @@
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+									<ObjectRef Name="distoriton" ID="{ECA7A4F6-8BC9-4FBB-9A26-1B472A8C4635}" WorkUnitID="{9747C29B-AE29-4CF0-B7D2-9B5BBE370D29}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
@@ -282,7 +285,80 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="ambience" ID="{039B9E87-2E09-40AF-A27C-2E0FE90D0E04}" ShortID="597956330"/>
+				<Folder Name="ambience" ID="{039B9E87-2E09-40AF-A27C-2E0FE90D0E04}" ShortID="597956330">
+					<ChildrenList>
+						<ActorMixer Name="sfx_train_interior" ID="{D415E548-1CC6-4FA9-A949-076531925119}" ShortID="333014462">
+							<PropertyList>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_train_interior_0" ID="{626F581B-3512-486E-BA71-7C3A80490912}" ShortID="960657723">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_train_interior_0" ID="{4868070B-958D-49E7-A9C5-5E32B70A757E}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_train_interior_0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="872582601"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_train_interior_0" ID="{4868070B-958D-49E7-A9C5-5E32B70A757E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_train_interior_1" ID="{5AE996A4-2BC3-45E0-8FBA-0FCA26CF97BD}" ShortID="780152691">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_train_interior_1" ID="{447C3F10-8D05-4370-9F82-699B45537285}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_train_interior_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="363573112"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_train_interior_1" ID="{447C3F10-8D05-4370-9F82-699B45537285}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="player" ID="{B213F3FD-703E-4577-BB44-EC8D929F1F52}" ShortID="285696751">
 					<ChildrenList>
 						<RandomSequenceContainer Name="sfx_footstep" ID="{E96B1EDB-5DA0-41EF-BF84-E257D413D74B}" ShortID="233810620">
