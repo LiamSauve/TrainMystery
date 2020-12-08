@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
+using Yarn.Unity;
 
 namespace TrainMystery
 {
@@ -21,6 +22,8 @@ namespace TrainMystery
         private GameState _state = GameState.running;
         [SerializeField]
         private GameObject _player;
+        [SerializeField]
+        private InMemoryVariableStorage yarnVariables;
 
         private void Awake()
         {
@@ -77,17 +80,14 @@ namespace TrainMystery
             _player.GetComponent<FirstPersonAIO>().ControllerPause();
         }
 
-        // game progress values
-        public bool hasGun { get; private set; }
-        public bool talkedToCharles { get; private set; }
+        // game progress
         public void HasGun()
         {
-            hasGun = true;
+            yarnVariables.SetValue("$HasGun", true);
             _player.GetComponent<Player>().EquipGun();
         }
         public void TalkedToCharles()
         {
-            talkedToCharles = true;
         }
     } 
 }

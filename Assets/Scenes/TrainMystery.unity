@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 366897154}
+  yarnVariables: {fileID: 2153203688864159870}
 --- !u!4 &188790951
 Transform:
   m_ObjectHideFlags: 0

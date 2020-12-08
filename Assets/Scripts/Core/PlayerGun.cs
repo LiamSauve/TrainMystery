@@ -51,6 +51,7 @@ namespace TrainMystery
             this.transform.localPosition = new Vector3(newX, newY + equipOffsetYPosition, newZ);
             this.transform.localRotation = Quaternion.Euler(0, 90, equipOffsetZRotate);
 
+            // set weapon down
             if(isEquipped)
             {
                 equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, 0, 0.05f);
