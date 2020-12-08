@@ -76,5 +76,18 @@ namespace TrainMystery
         {
             _player.GetComponent<FirstPersonAIO>().ControllerPause();
         }
+
+        // game progress values
+        public bool hasGun { get; private set; }
+        public bool talkedToCharles { get; private set; }
+        public void HasGun()
+        {
+            hasGun = true;
+            _player.GetComponent<Player>().EquipGun();
+        }
+        public void TalkedToCharles()
+        {
+            talkedToCharles = true;
+        }
     } 
 }

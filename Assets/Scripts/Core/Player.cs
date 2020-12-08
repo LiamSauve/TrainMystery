@@ -113,5 +113,10 @@ namespace TrainMystery
         {
             AkSoundEngine.PostEvent("Play_sfx_footstep", Camera.main.gameObject);
         }
+
+        public void EquipGun()
+        {
+            // show gun in hud/screen
+        }
     } 
 }

@@ -1,7 +1,13 @@
 title: Charles
 tags: 
 colorID: 0
-position: 357,-122
+position: 269,-341
 ---
+<<if not $talkedToCharles>> 
 Hi. I'm Charles Barkley.
+<<else>> 
+No not that Charles Barkley.
+<<endif>> 
+<<set $talkedToCharles to true>> // this is internal to the dialogue
+<<DialogueCommand_TalkedToCharles>> // this is setting a value in unity
 ===
