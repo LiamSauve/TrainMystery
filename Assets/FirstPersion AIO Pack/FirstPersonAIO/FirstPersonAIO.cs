@@ -71,6 +71,9 @@ public class FirstPersonAIO : MonoBehaviour {
 
     #region Variables
 
+    [SerializeField]
+    private TrainMystery.Player _player;
+
     #region Input Settings
     public bool controllerPauseState = false;
     #endregion
@@ -246,6 +249,8 @@ public class FirstPersonAIO : MonoBehaviour {
     #endregion
 
     private void Awake(){
+        _player = this.GetComponent<TrainMystery.Player>();
+
         #region Look Settings - Awake
         originalRotation = transform.localRotation.eulerAngles;
 
@@ -629,6 +634,7 @@ public class FirstPersonAIO : MonoBehaviour {
                             if(dynamicFootstep.currentClipSet.Any())
                             {
                                 //audioSource.PlayOneShot(dynamicFootstep.currentClipSet[Random.Range(0, dynamicFootstep.currentClipSet.Count)],Volume/10);
+                                _player.Footstep();
                             }
                             nextStepTime = headbobCycle + 0.5f;
                         } else
@@ -639,6 +645,7 @@ public class FirstPersonAIO : MonoBehaviour {
                                 if(dynamicFootstep.currentClipSet.Any())
                                 {
                                     //audioSource.PlayOneShot(dynamicFootstep.currentClipSet[Random.Range(0, dynamicFootstep.currentClipSet.Count)],Volume/10);
+                                    _player.Footstep();
                                 }
                             }
                         }
@@ -650,6 +657,7 @@ public class FirstPersonAIO : MonoBehaviour {
                             if(dynamicFootstep.currentClipSet.Any())
                             {
                                 //audioSource.PlayOneShot(dynamicFootstep.currentClipSet[Random.Range(0, dynamicFootstep.currentClipSet.Count)],Volume/10);
+                                _player.Footstep();
                             }
                         }
                         previousGrounded = false;
@@ -675,6 +683,7 @@ public class FirstPersonAIO : MonoBehaviour {
                                 if(footStepSounds.Any())
                                 {
                                     //audioSource.PlayOneShot(footStepSounds[n],Volume/10);
+                                    _player.Footstep();
                                 }
                                 footStepSounds[n] = footStepSounds[0];
                             }
@@ -713,6 +722,7 @@ public class FirstPersonAIO : MonoBehaviour {
                             if(footStepSounds.Any() && footStepSounds[n] != null)
                             {
                                 //audioSource.PlayOneShot(footStepSounds[n],Volume/10);
+                                _player.Footstep();
                             }
                         }
                     }

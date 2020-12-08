@@ -109,7 +109,7 @@ namespace TrainMystery
 
         }
 
-        void Footstep()
+        public void Footstep()
         {
             AkSoundEngine.PostEvent("Play_sfx_footstep", Camera.main.gameObject);
         }

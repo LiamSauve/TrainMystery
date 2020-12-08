@@ -29,7 +29,7 @@
 						</Sound>
 						<RandomSequenceContainer Name="mus_radio" ID="{3F25294B-41BD-41F9-9FB5-B9A1195B9349}" ShortID="36594657">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
@@ -286,13 +286,6 @@
 				<Folder Name="player" ID="{B213F3FD-703E-4577-BB44-EC8D929F1F52}" ShortID="285696751">
 					<ChildrenList>
 						<RandomSequenceContainer Name="sfx_footstep" ID="{E96B1EDB-5DA0-41EF-BF84-E257D413D74B}" ShortID="233810620">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
