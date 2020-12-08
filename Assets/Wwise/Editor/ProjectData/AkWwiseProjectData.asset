@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0109311ee6dee21468abe77728553720, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 26f04453bf579949abd522ef391dff33
+    GuidInternal: 
+    m_lastTime: -8585942349996087611
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: c98884584044fa4ca603b7ccd6deb4ce
+    GuidInternal: 
+    m_lastTime: -8585942349997397176
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 1b4d7992eb206a43be8c8be233a1d78b
+    GuidInternal: 
+    m_lastTime: -8585942254837341171
+    List:
+    - name: Main
+      guid: 30220f7a9200a24b923a27afd2574f7d
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 0f63dab042207d4ca9922658649de9dd
+    GuidInternal: 
+    m_lastTime: -8585942207135532560
+    List:
+    - name: Play_mus_radio
+      guid: 886ff16e3098eb43a2784d29cb240851
+      id: 2966579327
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_mus_radio
+        ObjectType: 3
+      Path: Default Work Unit\Play_mus_radio
+      maxAttenuation: 15
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_footstep
+      guid: 6784672176df4641897d96608dbd030d
+      id: 57417936
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_sfx_footstep
+        ObjectType: 3
+      Path: Default Work Unit\Play_sfx_footstep
+      maxAttenuation: 0
+      maxDuration: 0.612656
+      minDuration: 0.2915
+    - name: Play_sfx_radio_click
+      guid: b8855ac76dbea343a5f826bb8acaa564
+      id: 2633069342
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_sfx_radio_click
+        ObjectType: 3
+      Path: Default Work Unit\Play_sfx_radio_click
+      maxAttenuation: 15
+      maxDuration: 0.181338
+      minDuration: 0.181338
+    - name: Play_TESTEST
+      guid: 95204bbdfbca8c4c92d7c46db90c2cf3
+      id: 1663437058
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_TESTEST
+        ObjectType: 3
+      Path: Default Work Unit\Play_TESTEST
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: f35ddf2426c8314f8a1f6262ad8ff4e1
+    GuidInternal: 
+    m_lastTime: -8585942254837761037
+    List:
+    - name: rtpc_radio_volume
+      guid: 81aae0d8311b064cbbed8d46ded322d0
+      id: 733517689
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: rtpc_radio_volume
+        ObjectType: 13
+      Path: Default Work Unit\rtpc_radio_volume
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: a1204ee40ce34f4aa001dc62d113670d
+    GuidInternal: 
+    m_lastTime: -8585942349997137258
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 62061de9f08b0c4793c56cd57981cca2
+    GuidInternal: 
+    m_lastTime: -8585942349997267212
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 25758f97aee1104eb06168aa9eee334e
+    GuidInternal: 
+    m_lastTime: -8585942349996237551
+    List: []
+  ExpandedItems:
+  - /Train Mystery_WwiseProject
+  - /Train Mystery_WwiseProject/Events
+  - /Train Mystery_WwiseProject/Events/Default Work Unit
+  - /Train Mystery_WwiseProject/SoundBanks
+  - /Train Mystery_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

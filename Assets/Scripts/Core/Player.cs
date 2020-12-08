@@ -40,7 +40,12 @@ namespace TrainMystery
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Interact();
+                AttemptInteract();
+            }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Footstep();
             }
         }
 
@@ -60,9 +65,6 @@ namespace TrainMystery
             RaycastHit hit;
             if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask))
             {
-                //Debug.Log(hit.collider.gameObject);
-
-                // set inter
                 var interactable = hit.collider.gameObject.GetComponent<Interactable>() != null ? hit.collider.gameObject.GetComponent<Interactable>() : null;
                 if (interactable != _facedInteractable)
                 {
@@ -77,7 +79,7 @@ namespace TrainMystery
             }
         }
 
-        void Interact()
+        void AttemptInteract()
         {
             var interactable = this.GetInteractable();
             if (!interactable)
@@ -105,6 +107,11 @@ namespace TrainMystery
                 _uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name);
             }
 
+        }
+
+        void Footstep()
+        {
+            AkSoundEngine.PostEvent("Play_sfx_footstep", Camera.main.gameObject);
         }
     } 
 }

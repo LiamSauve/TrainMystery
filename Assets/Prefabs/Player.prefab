@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5246370011104842277}
   - component: {fileID: 5326407877699168207}
   - component: {fileID: 5303558540391525907}
-  m_Layer: 0
-  m_Name: FirstPerson-AIO
+  - component: {fileID: 366897160}
+  m_Layer: 2
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   mouseInputInversion: 0
   cameraInputMethod: 0
   verticalRotationRange: 170
-  mouseSensitivity: 10
+  mouseSensitivity: 8
   fOVToMouseSensitivity: 1
   cameraSmoothing: 5
   lockAndHideCursor: 1
@@ -186,7 +187,7 @@ MonoBehaviour:
   enableCameraShake: 1
   autoCrosshair: 1
   drawStaminaMeter: 1
-  Crosshair: {fileID: 21300000, guid: 7fa7752f7f2a3fc4fbc2bcaea5671e2d, type: 3}
+  Crosshair: {fileID: 21300000, guid: edf2b3dfe4c4c2349a9ad23965917a88, type: 3}
   targetAngles: {x: 0, y: 0, z: 0}
   playerCanMove: 1
   walkByDefault: 1
@@ -194,15 +195,15 @@ MonoBehaviour:
   sprintKey: 304
   sprintSpeed: 8
   jumpPower: 5
-  canJump: 1
+  canJump: 0
   canHoldJump: 0
-  useStamina: 1
+  useStamina: 0
   staminaDepletionSpeed: 2
   staminaLevel: 50
   speed: 0
   staminaInternal: 0
   _crouchModifiers:
-    useCrouch: 1
+    useCrouch: 0
     toggleCrouch: 0
     crouchKey: 306
     crouchWalkSpeedMultiplier: 0.5
@@ -212,7 +213,7 @@ MonoBehaviour:
     gravityMultiplier: 1
     zeroFrictionMaterial: {fileID: 0}
     highFrictionMaterial: {fileID: 0}
-    maxSlopeAngle: 70
+    maxSlopeAngle: 55
     maxWallShear: 89
     maxStepHeight: 0.2
     curntGroundNormal: {x: 0, y: 0, z: 0}
@@ -297,6 +298,23 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fef61cddf814a2c49bf7a6c33791c766, type: 3}
     - {fileID: 8300000, guid: 73f938638097f8042ad7842aa5b04ac5, type: 3}
     - {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+--- !u!114 &366897160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190685058599273173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30ab28bc158d594288f048e33f4650a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseWhenGameIsPaused: 1
+  _camera: {fileID: 5208015398080937075}
+  _uiCommands: {fileID: 0}
+  _checkFacedObjectTimer: 0
+  _checkFacedObjectMax: 0.1
 --- !u!1 &5191301541988894629
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5188646596074217473}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HeadJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,9 +356,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5188158499637803307}
   - component: {fileID: 5208015398080937075}
-  - component: {fileID: 5273281493627260501}
   - component: {fileID: 5311863076285240823}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -404,14 +421,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5273281493627260501
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5191322990275134097}
-  m_Enabled: 1
 --- !u!124 &5311863076285240823
 Behaviour:
   m_ObjectHideFlags: 0

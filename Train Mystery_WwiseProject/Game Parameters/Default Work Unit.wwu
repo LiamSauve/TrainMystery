@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{24DF5DF3-C826-4F31-8A1F-6262AD8FF4E1}" SchemaVersion="97">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{24DF5DF3-C826-4F31-8A1F-6262AD8FF4E1}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="rtpc_radio_volume" ID="{D8E0AA81-1B31-4C06-BBED-8D46DED322D0}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

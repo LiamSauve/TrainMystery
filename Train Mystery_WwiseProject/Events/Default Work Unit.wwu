@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_sfx_footstep" ID="{21678467-DF76-4146-897D-96608DBD030D}">
+					<ChildrenList>
+						<Action Name="" ID="{B0A11A10-FD06-493C-AF06-65DCD1ED337E}" ShortID="181307985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_footstep" ID="{E96B1EDB-5DA0-41EF-BF84-E257D413D74B}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mus_radio" ID="{6EF16F88-9830-43EB-A278-4D29CB240851}">
+					<ChildrenList>
+						<Action Name="" ID="{D118628C-4C8D-404A-93E1-B70294A938F9}" ShortID="4448847">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_radio" ID="{3F25294B-41BD-41F9-9FB5-B9A1195B9349}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_radio_click" ID="{C75A85B8-BE6D-43A3-A5F8-26BB8ACAA564}">
+					<ChildrenList>
+						<Action Name="" ID="{DFC36676-D257-47D9-95E5-DE2718AE992B}" ShortID="782828984">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_radio_click" ID="{26916457-9D11-444C-A5E7-8AADC17151E8}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TESTEST" ID="{BD4B2095-CAFB-4C8C-92D7-C46DB90C2CF3}">
+					<ChildrenList>
+						<Action Name="" ID="{453B97B2-35B1-4A49-AEB5-C9A9FBC7450F}" ShortID="16506031">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Carpet-11" ID="{A4DDE876-9564-4FE5-8897-830FA6557882}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

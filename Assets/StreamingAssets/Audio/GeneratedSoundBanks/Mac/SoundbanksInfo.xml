@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Unity\Train Mystery\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2962962287">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="3580004948">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2966579327" Name="Play_mus_radio" ObjectPath="\Events\Default Work Unit\Play_mus_radio" MaxAttenuation="15.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="22704048" Language="SFX">
+							<ShortName>mus_duever_64kb.wav</ShortName>
+							<Path>SFX\mus_duever_64kb_10C4C929.wem</Path>
+						</File>
+						<File Id="162974701" Language="SFX">
+							<ShortName>mus_2to2_64kb.wav</ShortName>
+							<Path>SFX\mus_2to2_64kb_10C4C929.wem</Path>
+						</File>
+						<File Id="658008647" Language="SFX">
+							<ShortName>mus_sheik_64kb.wav</ShortName>
+							<Path>SFX\mus_sheik_64kb_10C4C929.wem</Path>
+						</File>
+						<File Id="692875855" Language="SFX">
+							<ShortName>mus_ka-lu-a_64kb.wav</ShortName>
+							<Path>SFX\mus_ka-lu-a_64kb_10C4C929.wem</Path>
+						</File>
+						<File Id="745936369" Language="SFX">
+							<ShortName>mus_lovrlane_64kb.wav</ShortName>
+							<Path>SFX\mus_lovrlane_64kb_10C4C929.wem</Path>
+						</File>
+						<File Id="936336130" Language="SFX">
+							<ShortName>mus_lupe_64kb.wav</ShortName>
+							<Path>SFX\mus_lupe_64kb_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="57417936" Name="Play_sfx_footstep" ObjectPath="\Events\Default Work Unit\Play_sfx_footstep" DurationType="OneShot" DurationMin="0.291500" DurationMax="0.612656">
+					<IncludedMemoryFiles>
+						<File Id="251793934" Language="SFX">
+							<ShortName>Carpet-03.wav</ShortName>
+							<Path>SFX\Carpet-03_10C4C929.wem</Path>
+						</File>
+						<File Id="421549149" Language="SFX">
+							<ShortName>Carpet-05.wav</ShortName>
+							<Path>SFX\Carpet-05_10C4C929.wem</Path>
+						</File>
+						<File Id="451163376" Language="SFX">
+							<ShortName>Carpet-04.wav</ShortName>
+							<Path>SFX\Carpet-04_10C4C929.wem</Path>
+						</File>
+						<File Id="532781912" Language="SFX">
+							<ShortName>Carpet-07.wav</ShortName>
+							<Path>SFX\Carpet-07_10C4C929.wem</Path>
+						</File>
+						<File Id="542576691" Language="SFX">
+							<ShortName>Carpet-08.wav</ShortName>
+							<Path>SFX\Carpet-08_10C4C929.wem</Path>
+						</File>
+						<File Id="693557963" Language="SFX">
+							<ShortName>Carpet-10.wav</ShortName>
+							<Path>SFX\Carpet-10_10C4C929.wem</Path>
+						</File>
+						<File Id="744091286" Language="SFX">
+							<ShortName>Carpet-11.wav</ShortName>
+							<Path>SFX\Carpet-11_10C4C929.wem</Path>
+						</File>
+						<File Id="850797429" Language="SFX">
+							<ShortName>Carpet-09.wav</ShortName>
+							<Path>SFX\Carpet-09_10C4C929.wem</Path>
+						</File>
+						<File Id="865452052" Language="SFX">
+							<ShortName>Carpet-06.wav</ShortName>
+							<Path>SFX\Carpet-06_10C4C929.wem</Path>
+						</File>
+						<File Id="904820182" Language="SFX">
+							<ShortName>Carpet-02.wav</ShortName>
+							<Path>SFX\Carpet-02_10C4C929.wem</Path>
+						</File>
+						<File Id="936304597" Language="SFX">
+							<ShortName>Carpet-01.wav</ShortName>
+							<Path>SFX\Carpet-01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2633069342" Name="Play_sfx_radio_click" ObjectPath="\Events\Default Work Unit\Play_sfx_radio_click" DurationType="OneShot" DurationMin="0.181338" DurationMax="0.181338">
+					<IncludedMemoryFiles>
+						<File Id="1069922633" Language="SFX">
+							<ShortName>sfx_radio_click.wav</ShortName>
+							<Path>SFX\sfx_radio_click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1663437058" Name="Play_TESTEST" ObjectPath="\Events\Default Work Unit\Play_TESTEST" DurationType="OneShot" DurationMin="0.508896" DurationMax="0.508896">
+					<IncludedMemoryFiles>
+						<File Id="744091286" Language="SFX">
+							<ShortName>Carpet-11.wav</ShortName>
+							<Path>SFX\Carpet-11_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="733517689" Name="rtpc_radio_volume" ObjectPath="\Game Parameters\Default Work Unit\rtpc_radio_volume"/>
+			</GameParameters>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

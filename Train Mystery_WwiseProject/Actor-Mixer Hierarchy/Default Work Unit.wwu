@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="radio" ID="{F4510D79-20A2-43AC-AF2A-2E739FFFDE8F}" ShortID="313524184">
+					<ChildrenList>
+						<Sound Name="sfx_radio_click" ID="{26916457-9D11-444C-A5E7-8AADC17151E8}" ShortID="709179000">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_radio_click" ID="{2D2CA65D-A9D2-4470-A5D8-BB1A7C8D69B5}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_radio_click.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1069922633"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_radio_click" ID="{2D2CA65D-A9D2-4470-A5D8-BB1A7C8D69B5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="mus_radio" ID="{3F25294B-41BD-41F9-9FB5-B9A1195B9349}" ShortID="36594657">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{C08CE359-D6CE-4B9A-81FD-855C5430AA5F}" ShortID="886730822">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="rtpc_radio_volume" ID="{D8E0AA81-1B31-4C06-BBED-8D46DED322D0}" WorkUnitID="{24DF5DF3-C826-4F31-8A1F-6262AD8FF4E1}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{A685884C-882A-4BFC-8BC4-56286468757A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="mus_lupe_64kb" ID="{47BDB74F-677F-4D71-8320-F2B14710D372}" ShortID="928733989">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_lupe_64kb" ID="{5B6D293F-94BD-4989-9B71-37DF6ED668F7}">
+											<Language>SFX</Language>
+											<AudioFile>mus_lupe_64kb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="936336130"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mus_lupe_64kb" ID="{5B6D293F-94BD-4989-9B71-37DF6ED668F7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mus_duever_64kb" ID="{94D56C2A-0DE0-4A55-8F2D-EAB9B1CB37C5}" ShortID="21894989">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_duever_64kb" ID="{8975CA55-74D5-47D8-8D44-9E55075A6939}">
+											<Language>SFX</Language>
+											<AudioFile>mus_duever_64kb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="22704048"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mus_duever_64kb" ID="{8975CA55-74D5-47D8-8D44-9E55075A6939}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mus_ka-lu-a_64kb" ID="{EE121D4A-1E49-4AB4-A811-5A4A19017D96}" ShortID="666769678">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_ka-lu-a_64kb" ID="{9D3B8BD2-BFB1-40D2-BD0A-6E4B774AC767}">
+											<Language>SFX</Language>
+											<AudioFile>mus_ka-lu-a_64kb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="692875855"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mus_ka-lu-a_64kb" ID="{9D3B8BD2-BFB1-40D2-BD0A-6E4B774AC767}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mus_sheik_64kb" ID="{C28BC4A3-23A3-405E-8171-ED089B4AA199}" ShortID="81982600">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_sheik_64kb" ID="{2686E4D1-D666-4270-8411-C2F98D1B2EF4}">
+											<Language>SFX</Language>
+											<AudioFile>mus_sheik_64kb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="658008647"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mus_sheik_64kb" ID="{2686E4D1-D666-4270-8411-C2F98D1B2EF4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mus_2to2_64kb" ID="{EF4A6505-C57B-4EE7-98A9-860E01F438B5}" ShortID="413691844">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_2to2_64kb" ID="{F935F9ED-03E9-405C-A8E0-4789CF948DFF}">
+											<Language>SFX</Language>
+											<AudioFile>mus_2to2_64kb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="162974701"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mus_2to2_64kb" ID="{F935F9ED-03E9-405C-A8E0-4789CF948DFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="mus_lovrlane_64kb" ID="{50B8A070-17BE-4FB8-BC39-B4DDD86B1AC7}" ShortID="396208588">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ObjectAttenuation" ID="{20791E86-9E0B-4786-8913-436FE5C5C55F}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_lovrlane_64kb" ID="{0F77235E-BACB-44ED-AB1D-79B81EC545DE}">
+											<Language>SFX</Language>
+											<AudioFile>mus_lovrlane_64kb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="745936369"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="mus_lovrlane_64kb" ID="{0F77235E-BACB-44ED-AB1D-79B81EC545DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}" ShortID="618422670">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{99DCAD48-8362-4FC2-BF33-100D1A8E3BED}" ShortID="450060324" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="4"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{99DCAD48-8362-4FC2-BF33-100D1A8E3BED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="mus_lupe_64kb" ID="{47BDB74F-677F-4D71-8320-F2B14710D372}"/>
+								<ItemRef Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}"/>
+								<ItemRef Name="mus_sheik_64kb" ID="{C28BC4A3-23A3-405E-8171-ED089B4AA199}"/>
+								<ItemRef Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}"/>
+								<ItemRef Name="mus_2to2_64kb" ID="{EF4A6505-C57B-4EE7-98A9-860E01F438B5}"/>
+								<ItemRef Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}"/>
+								<ItemRef Name="mus_duever_64kb" ID="{94D56C2A-0DE0-4A55-8F2D-EAB9B1CB37C5}"/>
+								<ItemRef Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}"/>
+								<ItemRef Name="mus_ka-lu-a_64kb" ID="{EE121D4A-1E49-4AB4-A811-5A4A19017D96}"/>
+								<ItemRef Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}"/>
+								<ItemRef Name="mus_lovrlane_64kb" ID="{50B8A070-17BE-4FB8-BC39-B4DDD86B1AC7}"/>
+								<ItemRef Name="silence_gap" ID="{090151FF-318D-42F8-9261-E17C1BA443DC}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ambience" ID="{039B9E87-2E09-40AF-A27C-2E0FE90D0E04}" ShortID="597956330"/>
+				<Folder Name="player" ID="{B213F3FD-703E-4577-BB44-EC8D929F1F52}" ShortID="285696751">
+					<ChildrenList>
+						<RandomSequenceContainer Name="sfx_footstep" ID="{E96B1EDB-5DA0-41EF-BF84-E257D413D74B}" ShortID="233810620">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Carpet-01" ID="{233DA60F-AF0B-4E96-BB27-6FFC97DC3340}" ShortID="123663409">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-01" ID="{98BC4328-1880-41E6-9251-5E58EAEBD666}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="936304597"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-01" ID="{98BC4328-1880-41E6-9251-5E58EAEBD666}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-02" ID="{38215FEE-A0F7-444B-A4F8-2A0FB6AE95DC}" ShortID="769044135">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-02" ID="{3C5066CC-B545-42B9-B103-C5510D0136FC}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="904820182"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-02" ID="{3C5066CC-B545-42B9-B103-C5510D0136FC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-03" ID="{85F65B43-DAEB-4059-9651-8FB30E9C41EA}" ShortID="956498021">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-03" ID="{4F1657C7-5B73-4CED-97D9-C3DBE1988BA0}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="251793934"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-03" ID="{4F1657C7-5B73-4CED-97D9-C3DBE1988BA0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-04" ID="{34B038A3-6D61-4D06-97AA-A585696CB9C9}" ShortID="660119725">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-04" ID="{C35AA562-6266-4C8F-A97D-D6B6B9C1765B}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="451163376"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-04" ID="{C35AA562-6266-4C8F-A97D-D6B6B9C1765B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-05" ID="{189D4356-E8CA-49CC-A5C9-093698E27656}" ShortID="570004143">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-05" ID="{54A3798E-8A89-4DF2-A54F-0174450D8F81}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="421549149"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-05" ID="{54A3798E-8A89-4DF2-A54F-0174450D8F81}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-06" ID="{C3E82007-9AAA-4A68-B53F-E3C3E839A629}" ShortID="800901278">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-06" ID="{A08AE087-5B88-4AA2-89E0-54632564B7C4}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865452052"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-06" ID="{A08AE087-5B88-4AA2-89E0-54632564B7C4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-07" ID="{B6CB4F33-6BB0-44A4-A0E3-C188B22CA321}" ShortID="399313454">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-07" ID="{31829029-5708-45E5-B4A2-4411D87FC4F5}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="532781912"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-07" ID="{31829029-5708-45E5-B4A2-4411D87FC4F5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-08" ID="{4B667234-54D9-4238-BFB0-8E9F63CE92C2}" ShortID="387048023">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-08" ID="{04962F20-6760-4E4A-BD36-A314191E25EA}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="542576691"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-08" ID="{04962F20-6760-4E4A-BD36-A314191E25EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-09" ID="{97080F2D-5DDB-4C58-B4A7-7D8AFAAC350B}" ShortID="335475833">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-09" ID="{FA56ACFB-9C07-478A-B9D4-14B8C977E0B4}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="850797429"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-09" ID="{FA56ACFB-9C07-478A-B9D4-14B8C977E0B4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-10" ID="{F0C378FC-3A67-4B54-BA02-492FC7B60B6D}" ShortID="361915825">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-10" ID="{8101FB65-122E-4ADA-9EF6-05D107A47343}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="693557963"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-10" ID="{8101FB65-122E-4ADA-9EF6-05D107A47343}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Carpet-11" ID="{A4DDE876-9564-4FE5-8897-830FA6557882}" ShortID="539652847">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Carpet-11" ID="{8EDACE54-3BE4-44B9-B962-A1026D6718F3}">
+											<Language>SFX</Language>
+											<AudioFile>Carpet-11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="744091286"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Carpet-11" ID="{8EDACE54-3BE4-44B9-B962-A1026D6718F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
