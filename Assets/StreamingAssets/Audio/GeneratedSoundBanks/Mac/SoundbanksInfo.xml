@@ -16,12 +16,12 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3582509182">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1167985470">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2966579327" Name="Play_mus_radio" ObjectPath="\Events\Default Work Unit\Play_mus_radio" MaxAttenuation="15.000000" DurationType="Infinite">
+				<Event Id="2966579327" Name="Play_mus_radio" ObjectPath="\Events\Default Work Unit\Play_mus_radio">
 					<IncludedMemoryFiles>
 						<File Id="22704048" Language="SFX">
 							<ShortName>mus_duever_64kb.wav</ShortName>
@@ -49,7 +49,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="57417936" Name="Play_sfx_footstep" ObjectPath="\Events\Default Work Unit\Play_sfx_footstep" DurationType="OneShot" DurationMin="0.291500" DurationMax="0.612656">
+				<Event Id="57417936" Name="Play_sfx_footstep" ObjectPath="\Events\Default Work Unit\Play_sfx_footstep">
 					<IncludedMemoryFiles>
 						<File Id="251793934" Language="SFX">
 							<ShortName>Carpet-03.wav</ShortName>
@@ -97,7 +97,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2633069342" Name="Play_sfx_radio_click" ObjectPath="\Events\Default Work Unit\Play_sfx_radio_click" DurationType="OneShot" DurationMin="0.181338" DurationMax="0.181338">
+				<Event Id="2633069342" Name="Play_sfx_radio_click" ObjectPath="\Events\Default Work Unit\Play_sfx_radio_click">
 					<IncludedMemoryFiles>
 						<File Id="1069922633" Language="SFX">
 							<ShortName>sfx_radio_click.wav</ShortName>
@@ -105,7 +105,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4166342023" Name="Play_sfx_train_interior" ObjectPath="\Events\Default Work Unit\Play_sfx_train_interior" DurationType="Infinite">
+				<Event Id="4166342023" Name="Play_sfx_train_interior" ObjectPath="\Events\Default Work Unit\Play_sfx_train_interior">
 					<IncludedMemoryFiles>
 						<File Id="363573112" Language="SFX">
 							<ShortName>sfx_train_interior_1.wav</ShortName>

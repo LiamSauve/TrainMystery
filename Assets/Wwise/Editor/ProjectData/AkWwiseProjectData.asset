@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 1b4d7992eb206a43be8c8be233a1d78b
     GuidInternal: 
-    m_lastTime: -8585941446339704169
+    m_lastTime: -8585941227531580019
     List:
     - name: Main
       guid: 30220f7a9200a24b923a27afd2574f7d
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0f63dab042207d4ca9922658649de9dd
     GuidInternal: 
-    m_lastTime: -8585941446339794147
+    m_lastTime: -8585941231984101104
     List:
     - name: Play_mus_radio
       guid: 886ff16e3098eb43a2784d29cb240851
@@ -116,6 +116,18 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_sfx_train_interior
       maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_tree_woosh
+      guid: 2b80176c63762244975e1030a6fe7898
+      id: 1197227163
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_sfx_tree_woosh
+        ObjectType: 3
+      Path: Default Work Unit\Play_sfx_tree_woosh
+      maxAttenuation: 15
       maxDuration: -1
       minDuration: -1
   RtpcWwu:
@@ -171,7 +183,5 @@ MonoBehaviour:
   - /Train Mystery_WwiseProject
   - /Train Mystery_WwiseProject/Events
   - /Train Mystery_WwiseProject/Events/Default Work Unit
-  - /Train Mystery_WwiseProject/SoundBanks
-  - /Train Mystery_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

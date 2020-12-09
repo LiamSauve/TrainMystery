@@ -357,6 +357,40 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<Sound Name="sfx_tree_woosh" ID="{F91CB1DE-C680-439A-9BA2-86F66703085B}" ShortID="656161642">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="TreeAttenuation" ID="{5EA391E5-3DB6-4AF8-9FDE-790E12A4E8F2}" WorkUnitID="{4E7B1E95-2380-4B82-B8B3-790DFD2812EC}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="gust" ID="{5CD401FE-DD0D-4DF4-81A7-1D04B0ECBF11}">
+									<Language>SFX</Language>
+									<AudioFile>gust.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="675363489"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="gust" ID="{5CD401FE-DD0D-4DF4-81A7-1D04B0ECBF11}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="player" ID="{B213F3FD-703E-4577-BB44-EC8D929F1F52}" ShortID="285696751">

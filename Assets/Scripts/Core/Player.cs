@@ -58,9 +58,10 @@ namespace TrainMystery
 
             // look for object
             LayerMask interactableMask = LayerMask.GetMask("Interactable");
+            LayerMask defaultMask = LayerMask.GetMask("Default");
             Ray ray = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
             RaycastHit hit;
-            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask))
+            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask | defaultMask))
             {
                 var interactable = hit.collider.gameObject.GetComponent<Interactable>() != null ? hit.collider.gameObject.GetComponent<Interactable>() : null;
                 if (interactable != _facedInteractable)

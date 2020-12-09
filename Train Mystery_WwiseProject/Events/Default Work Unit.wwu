@@ -57,6 +57,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_tree_woosh" ID="{6C17802B-7663-4422-975E-1030A6FE7898}">
+					<ChildrenList>
+						<Action Name="" ID="{8FD604CC-6DC2-48B5-ACB8-6CB3D5BBD686}" ShortID="934030556">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_tree_woosh" ID="{F91CB1DE-C680-439A-9BA2-86F66703085B}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

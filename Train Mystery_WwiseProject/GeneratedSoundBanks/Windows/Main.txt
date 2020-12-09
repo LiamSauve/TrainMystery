@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	57417936	Play_sfx_footstep			\Default Work Unit\Play_sfx_footstep	
+	1197227163	Play_sfx_tree_woosh			\Default Work Unit\Play_sfx_tree_woosh	
 	2633069342	Play_sfx_radio_click			\Default Work Unit\Play_sfx_radio_click	
 	2966579327	Play_mus_radio			\Default Work Unit\Play_mus_radio	
 	4166342023	Play_sfx_train_interior			\Default Work Unit\Play_sfx_train_interior	
@@ -23,6 +24,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	532781912	Carpet-07	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-07		53660
 	542576691	Carpet-08	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-08		46072
 	658008647	mus_sheik_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_sheik_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_sheik_64kb		17046080
+	675363489	sfx_tree_woosh	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\gust_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_tree_woosh		529264
 	692875855	mus_ka-lu-a_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_ka-lu-a_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_ka-lu-a_64kb		15088736
 	693557963	Carpet-10	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-10		34688
 	744091286	Carpet-11	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-11		48918
