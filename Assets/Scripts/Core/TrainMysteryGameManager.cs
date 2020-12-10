@@ -24,6 +24,8 @@ namespace TrainMystery
         private GameObject _player;
         [SerializeField]
         public InMemoryVariableStorage yarnVariables;
+        [SerializeField]
+        public UICommands uiCommands;
 
         private void Awake()
         {
@@ -81,8 +83,6 @@ namespace TrainMystery
         }
 
         // game progress
-
-
         public void GotGun()
         {
             yarnVariables.SetValue("$HasGun", true);

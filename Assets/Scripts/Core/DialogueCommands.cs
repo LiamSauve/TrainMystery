@@ -13,6 +13,7 @@ namespace TrainMystery
         private void Awake()
         {
             dialogueRunner.AddCommandHandler("DialogueCommand_Test", DialogueCommand_Test);
+            dialogueRunner.AddCommandHandler("DialogueCommand_AddNoteTest", DialogueCommand_AddNoteTest);
         }
 
         // Start/End
@@ -36,6 +37,32 @@ namespace TrainMystery
             {
                 Debug.Log(parameters[0]);
             }
+        }
+
+        private void DialogueCommand_AddNoteTest(string[] parameters)
+        {
+            //if (parameters.Length > 0)
+            //{
+            //    Debug.Log(parameters[0]);
+            //}
+            var note = string.Empty;
+
+            foreach(var s in parameters)
+            {
+                //if(string.Equals(s, string.Empty))
+                //{
+                //    return;
+                //}
+
+                note += s + " ";
+            }
+
+            if (string.Equals(note, string.Empty))
+            {
+                return;
+            }
+
+            TrainMysteryGameManager.Instance.uiCommands.AddNote(note);
         }
     } 
 }

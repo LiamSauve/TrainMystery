@@ -14,6 +14,8 @@ namespace TrainMystery
         [SerializeField] private float _bobFrequencyY;
         [SerializeField] private float _bobFrequencyZ;
 
+        [SerializeField] private float equipSpeed = 0.05f;
+
         private float _startX;
         private float _startY;
         private float _startZ;
@@ -21,7 +23,6 @@ namespace TrainMystery
         private float timer = 0f;
 
         private float equipOffsetYPosition = -0.5f;
-        private float equipSpeed = 0.05f;
 
         public bool isEquipped { get; private set; }
 
@@ -52,11 +53,11 @@ namespace TrainMystery
             // set notebook down
             if (isEquipped)
             {
-                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, 0, 0.05f);
+                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, 0, equipSpeed);
             }
             else
             {
-                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, -0.5f, 0.05f);
+                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, -0.5f, equipSpeed);
             }
         }
 
@@ -70,8 +71,15 @@ namespace TrainMystery
             isEquipped = equip;
             if (isEquipped)
             {
-                //AkSoundEngine.PostEvent("Play_sfx_gun_equip", Camera.main.gameObject); // make book equip sound
+                TrainMysteryGameManager.Instance.yarnVariables.SetValue("$NotebookEquipped", true);
+                return;
             }
+            TrainMysteryGameManager.Instance.yarnVariables.SetValue("$NotebookGunEquipped", false);
+        }
+
+        public void AddNote()
+        {
+
         }
     }
 }

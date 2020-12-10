@@ -10,8 +10,8 @@ namespace TrainMystery
 
         [SerializeField]
         private Camera _camera;
-        [SerializeField]
-        private UICommands _uiCommands;
+        //[SerializeField]
+        //private UICommands _uiCommands;
 
         [SerializeField]
         private float _checkFacedObjectTimer = 1f;
@@ -110,11 +110,11 @@ namespace TrainMystery
         {
             if (_facedInteractable == null)
             {
-                _uiCommands.SetFacedObjectLabel(string.Empty);
+                TrainMysteryGameManager.Instance.uiCommands.SetFacedObjectLabel(string.Empty);
             }
             else
             {
-                _uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name + " <sprite=0>");
+                TrainMysteryGameManager.Instance.uiCommands.SetFacedObjectLabel(_facedInteractable.transform.name + " <sprite=0>");
             }
 
         }

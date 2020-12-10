@@ -14,6 +14,8 @@ namespace TrainMystery
         [SerializeField] private float _bobFrequencyY;
         [SerializeField] private float _bobFrequencyZ;
 
+        [SerializeField] private float equipSpeed = 0.2f;
+
         private float _startX;
         private float _startY;
         private float _startZ;
@@ -22,7 +24,6 @@ namespace TrainMystery
 
         private float equipOffsetYPosition = -0.5f;
         private float equipOffsetZRotate = 60f;
-        private float equipSpeed = 0.075f;
 
         public bool isEquipped { get; private set; }
         private bool isShooting = false;
@@ -58,13 +59,13 @@ namespace TrainMystery
             // set weapon down
             if(isEquipped)
             {
-                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, 0, 0.05f);
-                equipOffsetZRotate = Mathf.Lerp(equipOffsetZRotate, 0, 0.05f);
+                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, 0, equipSpeed);
+                equipOffsetZRotate = Mathf.Lerp(equipOffsetZRotate, 0, equipSpeed);
             }
             else
             {
-                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, -0.5f, 0.05f);
-                equipOffsetZRotate = Mathf.Lerp(equipOffsetZRotate, 60, 0.05f);
+                equipOffsetYPosition = Mathf.Lerp(equipOffsetYPosition, -0.5f, equipSpeed);
+                equipOffsetZRotate = Mathf.Lerp(equipOffsetZRotate, 60, equipSpeed);
             }
         }
 
@@ -79,7 +80,10 @@ namespace TrainMystery
             if(isEquipped)
             {
                 AkSoundEngine.PostEvent("Play_sfx_gun_equip", Camera.main.gameObject);
+                TrainMysteryGameManager.Instance.yarnVariables.SetValue("$GunEquipped", true);
+                return;
             }
+            TrainMysteryGameManager.Instance.yarnVariables.SetValue("$GunEquipped", false);
         }
 
         public void Shoot()
