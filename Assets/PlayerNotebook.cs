@@ -71,15 +71,11 @@ namespace TrainMystery
             isEquipped = equip;
             if (isEquipped)
             {
+                AkSoundEngine.PostEvent("Play_sfx_notebook_equip", Camera.main.gameObject);
                 TrainMysteryGameManager.Instance.yarnVariables.SetValue("$NotebookEquipped", true);
                 return;
             }
             TrainMysteryGameManager.Instance.yarnVariables.SetValue("$NotebookGunEquipped", false);
-        }
-
-        public void AddNote()
-        {
-
         }
     }
 }

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="982615047">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2454385653">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -110,6 +110,22 @@
 						<File Id="116368042" Language="SFX">
 							<ShortName>sfx_gun_shoot.wav</ShortName>
 							<Path>SFX\sfx_gun_shoot_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3850136368" Name="Play_sfx_notebook_equip" ObjectPath="\Events\Default Work Unit\Play_sfx_notebook_equip">
+					<IncludedMemoryFiles>
+						<File Id="618503560" Language="SFX">
+							<ShortName>sfx_notebook_equip.wav</ShortName>
+							<Path>SFX\sfx_notebook_equip_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="864320993" Name="Play_sfx_notebook_write" ObjectPath="\Events\Default Work Unit\Play_sfx_notebook_write">
+					<IncludedMemoryFiles>
+						<File Id="197475133" Language="SFX">
+							<ShortName>sfx_notebook_write.wav</ShortName>
+							<Path>SFX\sfx_notebook_write_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

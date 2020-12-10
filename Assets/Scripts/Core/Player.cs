@@ -56,6 +56,11 @@ namespace TrainMystery
             {
                 EquipNotebook();
             }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                ShootGun();
+            }
         }
 
         void LookForObjectInFront()
@@ -70,8 +75,8 @@ namespace TrainMystery
 
             // look for object
             LayerMask interactableMask = LayerMask.GetMask("Interactable");
-            LayerMask defaultMask = LayerMask.GetMask("Default");
-            Ray ray = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            LayerMask defaultMask      = LayerMask.GetMask("Default");
+            Ray ray                    = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
             RaycastHit hit;
             if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask | defaultMask))
             {
@@ -122,6 +127,11 @@ namespace TrainMystery
         public void Footstep()
         {
             AkSoundEngine.PostEvent("Play_sfx_footstep", Camera.main.gameObject);
+        }
+
+        public void ShootGun()
+        {
+            _playerGun.Shoot();
         }
 
         public void EquipGun()

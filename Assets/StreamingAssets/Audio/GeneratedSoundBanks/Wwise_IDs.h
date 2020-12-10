@@ -17,6 +17,8 @@ namespace AK
         static const AkUniqueID PLAY_SFX_FOOTSTEP = 57417936U;
         static const AkUniqueID PLAY_SFX_GUN_EQUIP = 2278091865U;
         static const AkUniqueID PLAY_SFX_GUN_SHOOT = 1263427304U;
+        static const AkUniqueID PLAY_SFX_NOTEBOOK_EQUIP = 3850136368U;
+        static const AkUniqueID PLAY_SFX_NOTEBOOK_WRITE = 864320993U;
         static const AkUniqueID PLAY_SFX_RADIO_CLICK = 2633069342U;
         static const AkUniqueID PLAY_SFX_TRAIN_INTERIOR = 4166342023U;
         static const AkUniqueID PLAY_SFX_TREE_WOOSH = 1197227163U;

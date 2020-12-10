@@ -42,6 +42,9 @@
 				<Event Name="Play_sfx_train_interior" ID="{F9BAB28E-23EA-4EDA-89F3-DD119BD749B5}">
 					<ChildrenList>
 						<Action Name="" ID="{66EA71F0-C332-4551-BBA4-8393399967D7}" ShortID="1031591696">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="7.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_train_interior_0" ID="{626F581B-3512-486E-BA71-7C3A80490912}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
@@ -49,6 +52,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{D9365AAA-31F8-4C5B-84DA-ED33A02F5DCD}" ShortID="619309973">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="7.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_train_interior_1" ID="{5AE996A4-2BC3-45E0-8FBA-0FCA26CF97BD}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
@@ -85,6 +91,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_gun_shoot" ID="{4EEF20D1-E22B-42D9-A69B-41BF29C1E39E}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_notebook_equip" ID="{15414271-1CE0-4121-96AA-A8ABC0AEB5C3}">
+					<ChildrenList>
+						<Action Name="" ID="{77F4089C-5A92-4068-8382-FED73CC3E973}" ShortID="659752028">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_notebook_equip" ID="{1B1C474A-1478-4E07-85AC-A7B615E6A4DA}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_notebook_write" ID="{DCAE9DD2-B54D-4E3B-9C28-72D66CE719F9}">
+					<ChildrenList>
+						<Action Name="" ID="{17FDCB6A-7D99-48F2-BECB-564BEECC883F}" ShortID="105110696">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_notebook_write" ID="{59430222-242A-443F-9AAB-F10F03EC2D68}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

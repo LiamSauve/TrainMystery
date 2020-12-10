@@ -22,6 +22,7 @@ namespace TrainMystery
         {
             if (TrainMysteryGameManager.Instance.yarnVariables.GetValue("$NotebookEquipped").AsBool) // otherwise we don't add the note :P
             {
+                AkSoundEngine.PostEvent("Play_sfx_notebook_write", Camera.main.gameObject);
                 _notebookLabel.text += "\n - " + note;
             }
         }
