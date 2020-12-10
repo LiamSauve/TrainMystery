@@ -18,6 +18,7 @@ namespace TrainMystery
 
         public override void Interact()
         {
+            TrainMysteryGameManager.Instance.uiCommands.SetFacedObjectLabel(string.Empty);
             FindObjectOfType<DialogueRunner>().StartDialogue(startNode);
         }
     } 

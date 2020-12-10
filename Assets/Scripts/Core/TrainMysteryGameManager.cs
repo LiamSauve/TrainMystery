@@ -10,8 +10,9 @@ namespace TrainMystery
     public enum GameState
     {
         running = 0,
-        dialogue = 1,
-        menu = 2
+        intro = 1,
+        dialogue = 2,
+        menu = 3
     }
 
     public class TrainMysteryGameManager : MonoBehaviour
@@ -26,6 +27,9 @@ namespace TrainMystery
         public InMemoryVariableStorage yarnVariables;
         [SerializeField]
         public UICommands uiCommands;
+        [SerializeField]
+        public Introduction introduction;
+
 
         private void Awake()
         {
@@ -37,6 +41,8 @@ namespace TrainMystery
             {
                 _instance = this;
             }
+
+            BeginIntroduction();
         }
 
         public bool IsPaused()
@@ -64,6 +70,25 @@ namespace TrainMystery
         public GameState GetGameState()
         {
             return _state;
+        }
+
+        private void BeginIntroduction()
+        {
+
+            if(!introduction.gameObject.activeInHierarchy)
+            {
+                return;
+            }
+
+            SetGameState(GameState.intro);
+            introduction.Begin();
+            PausePlayerController();
+        }
+
+        public void EndIntroduction()
+        {
+            SetGameState(GameState.running);
+            UnpausePlayerController();
         }
 
         public void PausePlayerController()
