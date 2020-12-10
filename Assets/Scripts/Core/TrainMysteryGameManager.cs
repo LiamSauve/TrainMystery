@@ -23,7 +23,7 @@ namespace TrainMystery
         [SerializeField]
         private GameObject _player;
         [SerializeField]
-        private InMemoryVariableStorage yarnVariables;
+        public InMemoryVariableStorage yarnVariables;
 
         private void Awake()
         {
@@ -81,10 +81,17 @@ namespace TrainMystery
         }
 
         // game progress
-        public void HasGun()
+
+
+        public void GotGun()
         {
             yarnVariables.SetValue("$HasGun", true);
             _player.GetComponent<Player>().EquipGun();
+        }
+        public void GotNotebook()
+        {
+            yarnVariables.SetValue("$HasNotebook", true);
+            _player.GetComponent<Player>().EquipNotebook();
         }
         public void TalkedToCharles()
         {

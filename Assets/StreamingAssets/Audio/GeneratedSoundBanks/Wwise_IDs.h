@@ -15,8 +15,11 @@ namespace AK
     {
         static const AkUniqueID PLAY_MUS_RADIO = 2966579327U;
         static const AkUniqueID PLAY_SFX_FOOTSTEP = 57417936U;
+        static const AkUniqueID PLAY_SFX_GUN_EQUIP = 2278091865U;
+        static const AkUniqueID PLAY_SFX_GUN_SHOOT = 1263427304U;
         static const AkUniqueID PLAY_SFX_RADIO_CLICK = 2633069342U;
         static const AkUniqueID PLAY_SFX_TRAIN_INTERIOR = 4166342023U;
+        static const AkUniqueID PLAY_SFX_TREE_WOOSH = 1197227163U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

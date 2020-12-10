@@ -68,6 +68,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_gun_equip" ID="{48CF3B12-67B3-4911-A213-ACCE49EA2E67}">
+					<ChildrenList>
+						<Action Name="" ID="{407A9D4F-18E9-4680-8EB8-EECB2792019E}" ShortID="137207653">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_gun_equip" ID="{7AA47909-1B89-4B0F-88E0-FA0702C13C49}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_gun_shoot" ID="{DD2E2BD3-850A-425D-BE5A-2D0814053BDD}">
+					<ChildrenList>
+						<Action Name="" ID="{1396DEA3-15D6-4ACD-8F70-6EFCA38E45F8}" ShortID="449035700">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_gun_shoot" ID="{4EEF20D1-E22B-42D9-A69B-41BF29C1E39E}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

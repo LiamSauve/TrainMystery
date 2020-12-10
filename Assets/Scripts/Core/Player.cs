@@ -19,12 +19,14 @@ namespace TrainMystery
         private float _checkFacedObjectMax = 1f;
         [SerializeField]
         private PlayerGun _playerGun;
+        [SerializeField]
+        private PlayerNotebook _playerNotebook;
 
         void Start()
         {
             AkSoundEngine.PostEvent("Play_sfx_train_interior", Camera.main.gameObject);
         }
-
+        
         protected override void Update()
         {
             base.Update();
@@ -43,6 +45,16 @@ namespace TrainMystery
             if (Input.GetKeyDown(KeyCode.E))
             {
                 AttemptInteract();
+            }
+
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                EquipGun();
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                EquipNotebook();
             }
         }
 
@@ -114,8 +126,42 @@ namespace TrainMystery
 
         public void EquipGun()
         {
-            // show gun in hud/screen
-            _playerGun.Equip(true);
+            if(_playerNotebook.isEquipped)
+            {
+                _playerNotebook.Equip(false);
+            }
+
+            // gun already equipped
+            if (_playerGun.isEquipped)
+            {
+                _playerGun.Equip(false);
+                return;
+            }
+
+            if (TrainMysteryGameManager.Instance.yarnVariables.GetValue("$HasGun").AsBool)
+            {
+                _playerGun.Equip(true);
+            }
+        }
+
+        public void EquipNotebook()
+        {
+            if (_playerGun.isEquipped)
+            {
+                _playerGun.Equip(false);
+            }
+
+            // notebook already equipped
+            if (_playerNotebook.isEquipped)
+            {
+                _playerNotebook.Equip(false);
+                return;
+            }
+
+            if (TrainMysteryGameManager.Instance.yarnVariables.GetValue("$HasNotebook").AsBool)
+            {
+                _playerNotebook.Equip(true);
+            }
         }
     } 
 }

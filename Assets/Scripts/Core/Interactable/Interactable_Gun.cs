@@ -16,7 +16,7 @@ namespace TrainMystery
         public override void Interact()
         {
             // play equip sound, destroy self
-            TrainMysteryGameManager.Instance.HasGun();
+            TrainMysteryGameManager.Instance.GotGun();
             GameObject.Destroy(this.gameObject);
         }
     }

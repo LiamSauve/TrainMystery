@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,9 +22,10 @@ namespace TrainMystery
 
         private float equipOffsetYPosition = -0.5f;
         private float equipOffsetZRotate = 60f;
-        private float equipSpeed = 0.05f;
+        private float equipSpeed = 0.075f;
 
         public bool isEquipped { get; private set; }
+        private bool isShooting = false;
 
         protected override void Awake()
         {
@@ -43,6 +45,8 @@ namespace TrainMystery
         protected override void Update()
         {
             base.Update();
+
+            if (isShooting) return;
 
             timer += deltaTime;
             var newX = Oscillate(timer, _bobFrequencyX, _bobAmountX) + _startX;
@@ -72,6 +76,35 @@ namespace TrainMystery
         public void Equip(bool equip)
         {
             isEquipped = equip;
+            if(isEquipped)
+            {
+                AkSoundEngine.PostEvent("Play_sfx_gun_equip", Camera.main.gameObject);
+            }
+        }
+
+        public void Shoot()
+        {
+            if (!isEquipped) return;
+
+            AkSoundEngine.PostEvent("Play_sfx_gun_shoot", Camera.main.gameObject);
+            PlayShootAnim();
+        }
+
+        private void PlayShootAnim()
+        {
+            isShooting = true;
+            transform.localPosition = new Vector3(_startX, _startY, _startZ);
+
+            var startZ = transform.localPosition.z;
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(transform.DOLocalMoveZ(transform.localPosition.z - 0.05f, 0.075f).SetEase(Ease.Linear));
+            sequence.Append(transform.DOLocalMoveZ(startZ, 0.075f).SetEase(Ease.Linear));
+            sequence.AppendCallback(EndShootAnim);
+        }
+
+        private void EndShootAnim()
+        {
+            isShooting = false;
         }
     } 
 }
