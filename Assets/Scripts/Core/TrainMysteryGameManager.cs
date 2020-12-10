@@ -86,11 +86,17 @@ namespace TrainMystery
         public void GotGun()
         {
             yarnVariables.SetValue("$HasGun", true);
+            uiCommands.ShowGunInput(true);
+            uiCommands.SetFacedObjectLabel(string.Empty);
+
             _player.GetComponent<Player>().EquipGun();
         }
         public void GotNotebook()
         {
             yarnVariables.SetValue("$HasNotebook", true);
+            uiCommands.ShowNotebookInput(true);
+            uiCommands.SetFacedObjectLabel(string.Empty);
+
             _player.GetComponent<Player>().EquipNotebook();
         }
         public void TalkedToCharles()

@@ -77,13 +77,12 @@ namespace TrainMystery
         public void Equip(bool equip)
         {
             isEquipped = equip;
-            if(isEquipped)
+            if (isEquipped)
             {
                 AkSoundEngine.PostEvent("Play_sfx_gun_equip", Camera.main.gameObject);
-                TrainMysteryGameManager.Instance.yarnVariables.SetValue("$GunEquipped", true);
-                return;
             }
-            TrainMysteryGameManager.Instance.yarnVariables.SetValue("$GunEquipped", false);
+            TrainMysteryGameManager.Instance.yarnVariables.SetValue("$GunEquipped", isEquipped);
+            TrainMysteryGameManager.Instance.uiCommands.ShowShootInput(isEquipped);
         }
 
         public void Shoot()

@@ -12,6 +12,12 @@ namespace TrainMystery
         private TMP_Text _facedObjectLabel;
         [SerializeField]
         private TMP_Text _notebookLabel;
+        [SerializeField]
+        private GameObject _notebookEquipInput;
+        [SerializeField]
+        private GameObject _gunEquipInput;
+        [SerializeField]
+        private GameObject _gunShootInput;
 
         public void SetFacedObjectLabel(string facedObjectName)
         {
@@ -25,6 +31,21 @@ namespace TrainMystery
                 AkSoundEngine.PostEvent("Play_sfx_notebook_write", Camera.main.gameObject);
                 _notebookLabel.text += "\n - " + note;
             }
+        }
+
+        public void ShowNotebookInput(bool active)
+        {
+            _notebookEquipInput.gameObject.SetActive(active);
+        }
+
+        public void ShowGunInput(bool active)
+        {
+            _gunEquipInput.gameObject.SetActive(active);
+        }
+
+        public void ShowShootInput(bool active)
+        {
+            _gunShootInput.gameObject.SetActive(active);
         }
     }
 }
