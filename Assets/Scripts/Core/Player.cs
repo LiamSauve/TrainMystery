@@ -22,6 +22,8 @@ namespace TrainMystery
         [SerializeField]
         private PlayerNotebook _playerNotebook;
 
+        private bool _hasShot = false;
+
         void Start()
         {
             AkSoundEngine.PostEvent("Play_sfx_train_interior", Camera.main.gameObject);
@@ -63,7 +65,7 @@ namespace TrainMystery
             }
         }
 
-        void LookForObjectInFront()
+        void LookForObjectInFront(float distance = 5, bool updateName = true)
         {
             // check timer
             if (_checkFacedObjectTimer > 0)
@@ -78,13 +80,14 @@ namespace TrainMystery
             LayerMask defaultMask      = LayerMask.GetMask("Default");
             Ray ray                    = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
             RaycastHit hit;
-            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, 5, interactableMask | defaultMask))
+            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, distance, interactableMask | defaultMask))
             {
                 var interactable = hit.collider.gameObject.GetComponent<Interactable>() != null ? hit.collider.gameObject.GetComponent<Interactable>() : null;
                 if (interactable != _facedInteractable)
                 {
                     _facedInteractable = interactable;
-                    DisplayObjectName();
+                    if(updateName)
+                        DisplayObjectName();
                 }
             }
             else
@@ -131,7 +134,28 @@ namespace TrainMystery
 
         public void ShootGun()
         {
+            if(!_playerGun.isEquipped)
+            {
+                return;
+            }
+
+            if(_hasShot)
+            {
+                return;
+            }
             _playerGun.Shoot();
+            _hasShot = true;
+
+            LookForObjectInFront(100f, false);
+            if (_facedInteractable && _facedInteractable is Interactable_NPC)
+            {
+
+                TrainMysteryGameManager.Instance.GameOver_Murderer(_facedInteractable.gameObject.name);
+            }
+            else
+            {
+                TrainMysteryGameManager.Instance.GameOver_ShotNothing();
+            }
         }
 
         public void EquipGun()

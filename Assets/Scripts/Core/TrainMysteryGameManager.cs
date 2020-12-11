@@ -33,13 +33,15 @@ namespace TrainMystery
         [SerializeField]
         public GameOver gameOver;
 
+        public GameObject[] treeEmitters;
+
         private bool startGameTimer = false;
         [SerializeField]
         public float timer = 60f * 5f + 1; // 5 minutes
 
         private bool doCommenceGameOverTrainStation = false;
         private bool doCommenceGameOver = false;
-
+        private float _currentTrainVolume = 1;
 
         protected override void Awake()
         {
@@ -79,8 +81,10 @@ namespace TrainMystery
             {
                 Debug.Log("ending soon");
                 doCommenceGameOverTrainStation = true;
-                // stop emitters, slow down train tracks, generate train station
-                // set train rtpc to 0
+
+                SlowTrainDown();
+                DisableTreeEmitters();
+                GenerateTrainStation();
             }
 
             if(timer < 0)
@@ -95,6 +99,7 @@ namespace TrainMystery
 
         public void GameOver_User()
         {
+            startGameTimer = false;
             PausePlayerController();
 
             uiCommands.SetFacedObjectLabel(string.Empty);
@@ -103,13 +108,13 @@ namespace TrainMystery
             uiCommands.ShowShootInput(false);
             uiCommands.ShowTimer(false);
 
-            startGameTimer = false;
-
+            // no fancy UI stuff, just quit :)
             DOVirtual.DelayedCall(3, () => Application.Quit());
         }
 
         private void GameOver_TimeOut()
         {
+            startGameTimer = false;
             PausePlayerController();
 
             uiCommands.SetFacedObjectLabel(string.Empty);
@@ -119,14 +124,71 @@ namespace TrainMystery
             uiCommands.ShowTimer(false);
 
             gameOver.Begin_TimeOut();
-            startGameTimer = false;
         }
 
-        private void GameOver_Murderer()
+        public void GameOver_Murderer(string murdereredName)
+        {
+            startGameTimer = false;
+            PausePlayerController();
+
+            uiCommands.SetFacedObjectLabel(string.Empty);
+            uiCommands.ShowNotebookInput(false);
+            uiCommands.ShowGunInput(false);
+            uiCommands.ShowShootInput(false);
+            uiCommands.ShowTimer(false);
+
+            gameOver.Begin_Murderer(murdereredName);
+        }
+
+        public void GameOver_ShotNothing()
+        {
+            startGameTimer = false;
+            PausePlayerController();
+
+            uiCommands.SetFacedObjectLabel(string.Empty);
+            uiCommands.ShowNotebookInput(false);
+            uiCommands.ShowGunInput(false);
+            uiCommands.ShowShootInput(false);
+            uiCommands.ShowTimer(false);
+
+            gameOver.Begin_ShotNothing();
+        }
+
+        private void DisableTreeEmitters()
+        {
+            foreach(var v in treeEmitters)
+            {
+                if(v != null)
+                {
+                    var emitter = v.GetComponent<TreeEmitter>();
+                    emitter.End();
+                }
+            }
+        }
+
+        private void SlowTrainDown() // 30 seconds
+        {
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append( DOTween.To(() => _currentTrainVolume, x => _currentTrainVolume = x, 0, 30));
+            sequence.OnUpdate(() => UpdateTrainVolume() );
+
+            DOVirtual.DelayedCall(15, () => AkSoundEngine.PostEvent("Play_sfx_train_steamwhistle", Camera.main.gameObject));
+        }
+
+        private void UpdateTrainVolume()
+        {
+            AkSoundEngine.SetRTPCValue("rtpc_train_speed", _currentTrainVolume);
+        }
+
+        private void GenerateTrainStation()
         {
 
         }
 
+        private void DisableSounds()
+        {
+
+        }
 
         public bool IsPaused()
         {

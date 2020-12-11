@@ -118,6 +118,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_train_steamwhistle" ID="{2C48FDD8-AE34-4943-A9AE-FCECB705F591}">
+					<ChildrenList>
+						<Action Name="" ID="{4FF78446-6098-4E5D-8B9A-DF38DFA2E948}" ShortID="325206594">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_train_steamwhistle" ID="{FFDAF025-F203-4640-B284-53F6B36FF232}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

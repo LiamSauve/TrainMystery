@@ -11,13 +11,16 @@ namespace TrainMystery
     {
         timeout = 0,
         murderer,
-        success, failed
+        shotNothing,
+        success,
+        failed
     }
 
     public class GameOver : TimeScaleIndependentUpdate
     {
         public Image bg;
         public TMP_Text gameOverText;
+        public GameOverType gameOverType = GameOverType.timeout;
 
         // text anim stuff
         public float FadeSpeed = 0.2F;
@@ -30,6 +33,8 @@ namespace TrainMystery
         public string SuccesfulText = string.Empty;
         [TextArea(15, 20)]
         public string FailureText = string.Empty;
+        [TextArea(15, 20)]
+        public string ShotNothingText = string.Empty;
 
         protected override void Update()
         {
@@ -38,33 +43,76 @@ namespace TrainMystery
 
         public void Begin_TimeOut()
         {
+            gameOverType = GameOverType.timeout;
             gameObject.SetActive(true);
+
+            gameOverText.text = FailureText;
+            Blackout();
+        }
+
+        public void Begin_Murderer(string murdereredName)
+        {
+            gameOverType = GameOverType.murderer;
+            gameObject.SetActive(true);
+
+            var t = string.Format(MurdererText, murdereredName);
+            gameOverText.text = t;
+
+            Blackout();
+        }
+        
+        public void Begin_ShotNothing()
+        {
+            gameOverType = GameOverType.shotNothing;
+            gameObject.SetActive(true);
+
+            gameOverText.text = ShotNothingText;
             Blackout();
         }
 
         private void Blackout()
         {
-            bg.DOColor(Color.black, 2f)
-                .SetDelay(1)
-                .OnComplete(ShowEndText);
+            if(gameOverType == GameOverType.murderer)
+            {
+                bg.DOColor(Color.black, 2f)
+                    .SetDelay(1)
+                    .OnComplete(ShowEndText);
+            }
+
+            if (gameOverType == GameOverType.timeout)
+            {
+                bg.DOColor(Color.black, 2f)
+                    .SetDelay(1)
+                    .OnComplete(ShowEndText);
+            }
+
+            if (gameOverType == GameOverType.shotNothing)
+            {
+                bg.DOColor(Color.black, 2f)
+                    .SetDelay(1)
+                    .OnComplete(ShowEndText);
+            }
         }
+
+        // figure out how to show jail cell text
 
         private void ShowEndText()
         {
-            AnimateVertexColors();
-            //gameOverText.color = Color.white;
-            //gameOverText.DOColor(Color.clear, 2f)
-            //    .OnComplete(CloseGame);
+            StartCoroutine(AnimateVertexColors());
         }
 
-        private void JailCellEnd()
+        private void ShowEndText_AndFadeOut()
         {
-
+            StartCoroutine(AnimateVertexColors());
+            bg.DOColor(Color.black, 3f)
+                .SetDelay(1);
         }
 
-        private void TrainStationEnd()
+        private void HideGameOverText()
         {
-
+            gameOverText.color = Color.white;
+            gameOverText.DOColor(Color.clear, 2f)
+                .OnComplete(CloseGame);
         }
 
         private void CloseGame()
@@ -155,7 +203,7 @@ namespace TrainMystery
             }
 
             // end
-            // HideMainText();
+            HideGameOverText();
         }
     }
 }

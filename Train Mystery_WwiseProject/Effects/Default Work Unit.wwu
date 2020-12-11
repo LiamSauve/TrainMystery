@@ -29,6 +29,38 @@
 						<Property Name="PreEQBand3Gain" Type="Real32" Value="-0.5"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="TrainSpeedTimeStretch" ID="{FDCBD248-7EF5-4197-A8D5-EBBD7C149DBA}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="TimeStretch" Type="Real32" Value="50">
+							<RTPCList>
+								<RTPC Name="" ID="{47F49BAD-813C-4845-BD4E-80066B5F35D1}" ShortID="953949089">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="rtpc_train_speed" ID="{8A23D040-417B-4BDE-8A88-396A8EFC0A5F}" WorkUnitID="{24DF5DF3-C826-4F31-8A1F-6262AD8FF4E1}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{0D087DA5-1A59-4BFA-9627-2C2EA1C5892B}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>300</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>100</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

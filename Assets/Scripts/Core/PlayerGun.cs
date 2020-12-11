@@ -87,8 +87,6 @@ namespace TrainMystery
 
         public void Shoot()
         {
-            if (!isEquipped) return;
-
             AkSoundEngine.PostEvent("Play_sfx_gun_shoot", Camera.main.gameObject);
             PlayShootAnim();
         }

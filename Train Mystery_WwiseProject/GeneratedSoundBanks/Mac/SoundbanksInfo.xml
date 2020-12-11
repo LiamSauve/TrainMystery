@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3005374400">
+		<SoundBank Id="1355168291" Language="SFX" Hash="70681934">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="868209080">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3895612059">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -146,6 +146,14 @@
 						<File Id="872582601" Language="SFX">
 							<ShortName>sfx_train_interior_0.wav</ShortName>
 							<Path>SFX\sfx_train_interior_0_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1398714217" Name="Play_sfx_train_steamwhistle" ObjectPath="\Events\Default Work Unit\Play_sfx_train_steamwhistle">
+					<IncludedMemoryFiles>
+						<File Id="24230732" Language="SFX">
+							<ShortName>sfx_train_steamwhistle.wav</ShortName>
+							<Path>SFX\sfx_train_steamwhistle_C20E2FFF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

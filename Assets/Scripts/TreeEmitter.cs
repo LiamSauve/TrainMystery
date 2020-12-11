@@ -14,26 +14,34 @@ namespace TrainMystery
 
         private float start;
 
+        public bool disabled = false;
+
         protected override void Awake()
         {
             base.Awake();
-
-            MoveTree();
         }
 
         private void Start()
         {
             start = tree.transform.localPosition.z;
+            MoveTree();
         }
 
         private void MoveTree()
         {
-            tree.transform.localPosition = Vector3.zero;
-
             Sequence sequence = DOTween.Sequence();
+
             sequence.PrependInterval(Random.value);
+            sequence.Append(DOVirtual.DelayedCall(0,  () =>  {
+                tree.transform.localPosition = Vector3.zero; } ));
             sequence.Append(tree.transform.DOMoveZ(distance, 2).SetEase(Ease.Linear));
-            sequence.AppendCallback(MoveTree);
+            sequence.SetLoops(-1, LoopType.Restart);
+        }
+
+        public void End()
+        {
+            GameObject.Destroy(tree);
+            GameObject.Destroy(this.gameObject);
         }
     } 
 }
