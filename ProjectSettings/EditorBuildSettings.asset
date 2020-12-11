@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TrainMystery.unity
+    guid: 3cf6723dfaf8b054eb474f8c800cfba7
   m_configObjects: {}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using Yarn.Unity;
+using DG.Tweening;
 
 namespace TrainMystery
 {
@@ -15,7 +16,7 @@ namespace TrainMystery
         menu = 3
     }
 
-    public class TrainMysteryGameManager : MonoBehaviour
+    public class TrainMysteryGameManager : TimeScaleIndependentUpdate
     {
         public static TrainMysteryGameManager Instance { get { return _instance; } }
 
@@ -29,10 +30,20 @@ namespace TrainMystery
         public UICommands uiCommands;
         [SerializeField]
         public Introduction introduction;
+        [SerializeField]
+        public GameOver gameOver;
+
+        private bool startGameTimer = false;
+        [SerializeField]
+        public float timer = 60f * 5f + 1; // 5 minutes
+
+        private bool doCommenceGameOverTrainStation = false;
+        private bool doCommenceGameOver = false;
 
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);
@@ -44,6 +55,78 @@ namespace TrainMystery
 
             BeginIntroduction();
         }
+
+        protected override void Update()
+        {
+            base.Update();
+
+            UpdateTimer();
+        }
+
+        private void UpdateTimer()
+        {
+            if(startGameTimer)
+            {
+                timer -= deltaTime;
+
+                if (timer > 0.01)
+                {
+                    uiCommands.UpdateTimer(timer);
+                }
+            }
+
+            if(!doCommenceGameOverTrainStation && timer < 30f)
+            {
+                Debug.Log("ending soon");
+                doCommenceGameOverTrainStation = true;
+                // stop emitters, slow down train tracks, generate train station
+                // set train rtpc to 0
+            }
+
+            if(timer < 0)
+            {
+                if(doCommenceGameOver == false) // game over timer
+                {
+                    doCommenceGameOver = true;
+                    GameOver_TimeOut();
+                }
+            }
+        }
+
+        public void GameOver_User()
+        {
+            PausePlayerController();
+
+            uiCommands.SetFacedObjectLabel(string.Empty);
+            uiCommands.ShowNotebookInput(false);
+            uiCommands.ShowGunInput(false);
+            uiCommands.ShowShootInput(false);
+            uiCommands.ShowTimer(false);
+
+            startGameTimer = false;
+
+            DOVirtual.DelayedCall(3, () => Application.Quit());
+        }
+
+        private void GameOver_TimeOut()
+        {
+            PausePlayerController();
+
+            uiCommands.SetFacedObjectLabel(string.Empty);
+            uiCommands.ShowNotebookInput(false);
+            uiCommands.ShowGunInput(false);
+            uiCommands.ShowShootInput(false);
+            uiCommands.ShowTimer(false);
+
+            gameOver.Begin_TimeOut();
+            startGameTimer = false;
+        }
+
+        private void GameOver_Murderer()
+        {
+
+        }
+
 
         public bool IsPaused()
         {
@@ -77,6 +160,7 @@ namespace TrainMystery
 
             if(!introduction.gameObject.activeInHierarchy)
             {
+                startGameTimer = true;
                 return;
             }
 
@@ -89,6 +173,12 @@ namespace TrainMystery
         {
             SetGameState(GameState.running);
             UnpausePlayerController();
+            startGameTimer = true;
+        }
+
+        public void EndGame()
+        {
+
         }
 
         public void PausePlayerController()

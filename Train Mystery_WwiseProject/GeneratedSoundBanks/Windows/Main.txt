@@ -11,9 +11,11 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	733517689	rtpc_radio_volume			\Default Work Unit\rtpc_radio_volume	
+	1210142679	rtpc_train_speed			\Default Work Unit\rtpc_train_speed	
 
 Effect plug-ins	ID	Name	Type				Notes
 	347309346	distoriton	Wwise Guitar Distortion			
+	3295316144	TrainSpeedTimeStretch	Wwise Time Stretch			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	450060324	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\silence_gap\Wwise Silence	

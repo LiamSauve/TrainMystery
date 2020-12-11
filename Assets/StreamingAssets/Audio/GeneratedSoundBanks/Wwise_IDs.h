@@ -27,6 +27,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID RTPC_RADIO_VOLUME = 733517689U;
+        static const AkUniqueID RTPC_TRAIN_SPEED = 1210142679U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

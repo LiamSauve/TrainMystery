@@ -64,5 +64,10 @@ namespace TrainMystery
 
             TrainMysteryGameManager.Instance.uiCommands.AddNote(note);
         }
+
+        private void DialogueCommand_EndGame(string[] parameters) // accused
+        {
+            TrainMysteryGameManager.Instance.EndGame();
+        }
     } 
 }

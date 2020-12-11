@@ -18,6 +18,8 @@ namespace TrainMystery
         private GameObject _gunEquipInput;
         [SerializeField]
         private GameObject _gunShootInput;
+        [SerializeField]
+        private TMP_Text _timerLabel;
 
         public void SetFacedObjectLabel(string facedObjectName)
         {
@@ -46,6 +48,23 @@ namespace TrainMystery
         public void ShowShootInput(bool active)
         {
             _gunShootInput.gameObject.SetActive(active);
+        }
+
+        public void ShowTimer(bool active)
+        {
+            _timerLabel.gameObject.SetActive(active);
+        }
+
+        public void UpdateTimer(float time)
+        {
+            int minutes = Mathf.FloorToInt(time / 60F);
+            int seconds = Mathf.FloorToInt(time - minutes * 60);
+            string niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+            if(time < 59.9)
+            {
+                _timerLabel.color = Color.red;
+            }
+            _timerLabel.text = niceTime;
         }
     }
 }

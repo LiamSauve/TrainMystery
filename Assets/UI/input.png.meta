@@ -16,7 +16,7 @@ TextureImporter:
     second: Mouse0
   - first:
       213: 6438849117563251257
-    second: Escape
+    second: Q
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Escape
+      name: Q
       rect:
         serializedVersion: 2
         x: 0

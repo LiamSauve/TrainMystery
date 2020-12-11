@@ -1,0 +1,47 @@
+Event	ID	Name			Wwise Object Path	Notes
+	57417936	Play_sfx_footstep			\Default Work Unit\Play_sfx_footstep	
+	864320993	Play_sfx_notebook_write			\Default Work Unit\Play_sfx_notebook_write	
+	1197227163	Play_sfx_tree_woosh			\Default Work Unit\Play_sfx_tree_woosh	
+	1263427304	Play_sfx_gun_shoot			\Default Work Unit\Play_sfx_gun_shoot	
+	2278091865	Play_sfx_gun_equip			\Default Work Unit\Play_sfx_gun_equip	
+	2633069342	Play_sfx_radio_click			\Default Work Unit\Play_sfx_radio_click	
+	2966579327	Play_mus_radio			\Default Work Unit\Play_mus_radio	
+	3850136368	Play_sfx_notebook_equip			\Default Work Unit\Play_sfx_notebook_equip	
+	4166342023	Play_sfx_train_interior			\Default Work Unit\Play_sfx_train_interior	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	733517689	rtpc_radio_volume			\Default Work Unit\rtpc_radio_volume	
+
+Effect plug-ins	ID	Name	Type				Notes
+	347309346	distoriton	Wwise Guitar Distortion			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	450060324	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\silence_gap\Wwise Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	22704048	mus_duever_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_duever_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_duever_64kb		15356400
+	116368042	sfx_gun_shoot	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_gun_shoot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\gun\sfx_gun_shoot		161344
+	162974701	mus_2to2_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_2to2_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_2to2_64kb		15671360
+	197475133	sfx_notebook_write	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_notebook_write_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\notebook\sfx_notebook_write		153320
+	251793934	Carpet-03	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-03		28048
+	363573112	sfx_train_interior_1	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_train_interior_1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_train_interior\sfx_train_interior_1		968968
+	421549149	Carpet-05	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-05		58878
+	451163376	Carpet-04	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-04		37060
+	532781912	Carpet-07	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-07		53660
+	542576691	Carpet-08	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-08		46072
+	618503560	sfx_notebook_equip	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_notebook_equip_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\notebook\sfx_notebook_equip		100280
+	625281374	sfx_gun_equip	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_gun_equip_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\gun\sfx_gun_equip		132984
+	658008647	mus_sheik_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_sheik_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_sheik_64kb		17046080
+	675363489	sfx_tree_woosh	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\gust_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_tree_woosh		529264
+	692875855	mus_ka-lu-a_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_ka-lu-a_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_ka-lu-a_64kb		15088736
+	693557963	Carpet-10	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-10		34688
+	744091286	Carpet-11	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-11		48918
+	745936369	mus_lovrlane_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_lovrlane_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_lovrlane_64kb		17254312
+	850797429	Carpet-09	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-09		43226
+	865452052	Carpet-06	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-06		52712
+	872582601	sfx_train_interior_0	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_train_interior_0_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_train_interior\sfx_train_interior_0		968968
+	904820182	Carpet-02	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-02		33266
+	936304597	Carpet-01	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\Carpet-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\sfx_footstep\Carpet-01		33740
+	936336130	mus_lupe_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_lupe_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_lupe_64kb		14120756
+	1069922633	sfx_radio_click	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_radio_click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\sfx_radio_click		32052
+
