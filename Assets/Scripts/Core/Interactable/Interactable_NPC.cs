@@ -6,12 +6,18 @@ namespace TrainMystery
     {
         public string startNode;
         public YarnProgram yarnProgram;
+        DialogueRunner dialogueRunner;
+        InMemoryVariableStorage variableStorage;
+        CharacterData characterData;
+        public int charID;
 
         private void Start()
         {
+            dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+            variableStorage = dialogueRunner.GetComponent<InMemoryVariableStorage>();
+            characterData = dialogueRunner.GetComponent<CharacterData>();
             if (yarnProgram != null)
             {
-                DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
                 dialogueRunner.Add(yarnProgram);
             }
         }
@@ -19,7 +25,10 @@ namespace TrainMystery
         public override void Interact()
         {
             TrainMysteryGameManager.Instance.uiCommands.SetFacedObjectLabel(string.Empty);
-            FindObjectOfType<DialogueRunner>().StartDialogue(startNode);
+            variableStorage.SetValue("$convname", characterData.dialogueStrings[charID]); //set name (yarn vars in code must have $ at the start, but not in the inspector)
+            variableStorage.SetValue("$convdesc", characterData.dialogueStrings[charID+1]); //set description
+            variableStorage.SetValue("$convhand", characterData.dialogueStrings[charID+2]); //set handedness
+            dialogueRunner.StartDialogue(startNode);
         }
     } 
 }

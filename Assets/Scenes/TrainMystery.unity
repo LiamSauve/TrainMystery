@@ -1034,6 +1034,7 @@ MonoBehaviour:
   startNode: Chester
   yarnProgram: {fileID: 2480198943629176163, guid: 4316da9900ccb0141b3a6dc4e174d7b8,
     type: 3}
+  charID: 0
 --- !u!136 &223832738
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1977,6 +1978,7 @@ MonoBehaviour:
   startNode: Darren
   yarnProgram: {fileID: 2480198943629176163, guid: 3df98c54b36786c4bbe0f5d78a16a4c6,
     type: 3}
+  charID: 0
 --- !u!136 &316650332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4326,6 +4328,7 @@ MonoBehaviour:
   startNode: Chase
   yarnProgram: {fileID: 2480198943629176163, guid: 289dbe3251c79b14bbb5d34290f21149,
     type: 3}
+  charID: 0
 --- !u!136 &842574492
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6900,6 +6903,7 @@ MonoBehaviour:
   startNode: Start
   yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
     type: 3}
+  charID: 0
 --- !u!1 &2035190997
 GameObject:
   m_ObjectHideFlags: 0
@@ -7960,6 +7964,7 @@ GameObject:
   - component: {fileID: 2153203688864159871}
   - component: {fileID: 2153203688864159870}
   - component: {fileID: 2153203688864159872}
+  - component: {fileID: 2153203688864159873}
   m_Layer: 0
   m_Name: Dialogue Runner
   m_TagString: Untagged
@@ -7983,7 +7988,10 @@ MonoBehaviour:
   - name: convname
     value: NAME
     type: 1
-  - name: chand
+  - name: convdesc
+    value: DESCRIPTION
+    type: 1
+  - name: convhand
     value: HAND
     type: 1
   debugTextView: {fileID: 0}
@@ -8143,6 +8151,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 2153203688864159864}
+--- !u!114 &2153203688864159873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153203688864159869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6bc2015b1dd404ea2ff54e135f23f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueStrings:
+  - Poetian
+  - 'The old war eagle. A legendary veteran, turned combat instructor to the Prince.
+
+    He''s
+    never seen without a cigar and his trusty sabre.'
+  - LEFT
 --- !u!1 &2153203688874955020
 GameObject:
   m_ObjectHideFlags: 0
