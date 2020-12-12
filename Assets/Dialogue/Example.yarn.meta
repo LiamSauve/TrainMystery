@@ -1,0 +1,55 @@
+fileFormatVersion: 2
+guid: f59e063e941ca8a4ca61f4ded23dd1e5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-CA
+  stringIDs:
+  - Example-Start-0
+  - Example-Start-1
+  - Example-Start-2
+  - Example-Start-3
+  - Example-Start-4
+  - Example-Start-5
+  - Example-Start-6
+  - Example-Start-7
+  - Example-B1-8
+  - Example-C1-9
+  - Example-D1-10
+  - Example-End-11
+  - Example-A11N-12
+  - Example-A11N-13
+  - Example-A11Y-14
+  - Example-A11Y-15
+  - Example-A12N-16
+  - Example-A12N-17
+  - Example-A13N-18
+  - Example-A13N-19
+  - Example-A14N-20
+  - Example-A14N-21
+  - Example-A12Y-22
+  - Example-A12Y-23
+  - Example-A13Y-24
+  - Example-A13Y-25
+  - Example-A14Y-26
+  - Example-A14Y-27
+  - Example-A1-28
+  - Example-A1-29
+  - Example-A1-30
+  - Example-A1-31
+  - Example-A1-32
+  - Example-A1-33
+  - Example-A1-34
+  - Example-A1-35
+  - Example-A1-36
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
+    type: 3}
+  localizations: []

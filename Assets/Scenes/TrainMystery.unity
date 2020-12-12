@@ -6677,8 +6677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
-  startNode: Charles
-  yarnProgram: {fileID: 2480198943629176163, guid: 2fedc5ca94104e749815f698d9e25e67,
+  startNode: Start
+  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
     type: 3}
 --- !u!1 &2035190997
 GameObject:
@@ -7715,7 +7715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVariables: []
+  defaultVariables:
+  - name: convname
+    value: NAME
+    type: 1
+  - name: chand
+    value: HAND
+    type: 1
   debugTextView: {fileID: 0}
 --- !u!114 &2153203688864159871
 MonoBehaviour:
