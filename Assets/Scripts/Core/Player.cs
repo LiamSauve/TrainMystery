@@ -65,8 +65,13 @@ namespace TrainMystery
             }
         }
 
-        void LookForObjectInFront(float distance = 5, bool updateName = true)
+        void LookForObjectInFront(float distance = 5, bool updateName = true, bool forced = false)
         {
+            if(forced)
+            {
+                goto force;
+            }
+
             // check timer
             if (_checkFacedObjectTimer > 0)
             {
@@ -74,6 +79,8 @@ namespace TrainMystery
                 return;
             }
             _checkFacedObjectTimer = _checkFacedObjectMax;
+
+            force: // lol
 
             // look for object
             LayerMask interactableMask = LayerMask.GetMask("Interactable");
@@ -143,10 +150,11 @@ namespace TrainMystery
             {
                 return;
             }
+
             _playerGun.Shoot();
             _hasShot = true;
 
-            LookForObjectInFront(100f, false);
+            LookForObjectInFront(100f, false, true);
             if (_facedInteractable && _facedInteractable is Interactable_NPC)
             {
 
