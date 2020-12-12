@@ -203,6 +203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 188790951}
+  - {fileID: 1433211253}
   - {fileID: 4462291325980727485}
   - {fileID: 1779497910}
   m_Father: {fileID: 0}
@@ -265,7 +266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5:00
+  m_text: 15:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46dc69f678c11de4eb78c63c5ef13107, type: 2}
   m_sharedMaterial: {fileID: 2009618292529795674, guid: 46dc69f678c11de4eb78c63c5ef13107,
@@ -788,7 +789,7 @@ MonoBehaviour:
   - {fileID: 1113928280}
   - {fileID: 380012577}
   - {fileID: 1754339217}
-  timer: 301
+  timer: 36
 --- !u!4 &188790951
 Transform:
   m_ObjectHideFlags: 0
@@ -5100,7 +5101,7 @@ RectTransform:
   - {fileID: 395610048}
   - {fileID: 1169118551}
   - {fileID: 664580667}
-  m_Father: {fileID: 4462291325980727485}
+  m_Father: {fileID: 96013541}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5624,7 +5625,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 96013541}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1779497911
 MonoBehaviour:
@@ -7947,9 +7948,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2153203688864159865}
-  - {fileID: 1433211253}
   m_Father: {fileID: 96013541}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4565907293122357430
 MonoBehaviour:

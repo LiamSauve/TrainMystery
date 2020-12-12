@@ -79,7 +79,6 @@ namespace TrainMystery
 
             if(!doCommenceGameOverTrainStation && timer < 30f)
             {
-                Debug.Log("ending soon");
                 doCommenceGameOverTrainStation = true;
 
                 SlowTrainDown();

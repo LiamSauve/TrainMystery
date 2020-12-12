@@ -40,8 +40,9 @@ namespace TrainMystery
 
         public void End()
         {
-            GameObject.Destroy(tree);
-            GameObject.Destroy(this.gameObject);
+            AkSoundEngine.StopAll(tree);
+            Destroy(tree);
+            Destroy(this.gameObject);
         }
     } 
 }

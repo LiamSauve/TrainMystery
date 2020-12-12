@@ -21,12 +21,14 @@ namespace AK
         static const AkUniqueID PLAY_SFX_NOTEBOOK_WRITE = 864320993U;
         static const AkUniqueID PLAY_SFX_RADIO_CLICK = 2633069342U;
         static const AkUniqueID PLAY_SFX_TRAIN_INTERIOR = 4166342023U;
+        static const AkUniqueID PLAY_SFX_TRAIN_STEAMWHISTLE = 1398714217U;
         static const AkUniqueID PLAY_SFX_TREE_WOOSH = 1197227163U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID RTPC_RADIO_VOLUME = 733517689U;
+        static const AkUniqueID RTPC_TRAIN_SPEED = 1210142679U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

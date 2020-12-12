@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	864320993	Play_sfx_notebook_write			\Default Work Unit\Play_sfx_notebook_write	
 	1197227163	Play_sfx_tree_woosh			\Default Work Unit\Play_sfx_tree_woosh	
 	1263427304	Play_sfx_gun_shoot			\Default Work Unit\Play_sfx_gun_shoot	
+	1398714217	Play_sfx_train_steamwhistle			\Default Work Unit\Play_sfx_train_steamwhistle	
 	2278091865	Play_sfx_gun_equip			\Default Work Unit\Play_sfx_gun_equip	
 	2633069342	Play_sfx_radio_click			\Default Work Unit\Play_sfx_radio_click	
 	2966579327	Play_mus_radio			\Default Work Unit\Play_mus_radio	
@@ -11,15 +12,19 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	733517689	rtpc_radio_volume			\Default Work Unit\rtpc_radio_volume	
+	1210142679	rtpc_train_speed			\Default Work Unit\rtpc_train_speed	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	347309346	distoriton	Wwise Guitar Distortion			
+	3295316144	TrainSpeedTimeStretch	Wwise Time Stretch			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	450060324	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\silence_gap\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	22704048	mus_duever_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_duever_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_duever_64kb		15356400
+	24230732	sfx_train_steamwhistle	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_train_steamwhistle_C20E2FFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_train_steamwhistle		560964
 	116368042	sfx_gun_shoot	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_gun_shoot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\gun\sfx_gun_shoot		161344
 	162974701	mus_2to2_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\mus_2to2_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_2to2_64kb		15671360
 	197475133	sfx_notebook_write	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Windows\SFX\sfx_notebook_write_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\notebook\sfx_notebook_write		153320

@@ -24,7 +24,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	22704048	mus_duever_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\SFX\mus_duever_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_duever_64kb		15356400
-	24230732	sfx_train_steamwhistle	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\SFX\sfx_train_steamwhistle_C20E2FFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_train_steamwhistle		560964
+	24230732	sfx_train_steamwhistle	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\SFX\sfx_train_steamwhistle_07C2B5FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\ambience\sfx_train_steamwhistle		560964
 	116368042	sfx_gun_shoot	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\SFX\sfx_gun_shoot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\gun\sfx_gun_shoot		161344
 	162974701	mus_2to2_64kb	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\SFX\mus_2to2_64kb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\radio\mus_radio\mus_2to2_64kb		15671360
 	197475133	sfx_notebook_write	D:\Projects\Unity\Train Mystery\Train Mystery_WwiseProject\.cache\Mac\SFX\sfx_notebook_write_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player\notebook\sfx_notebook_write		153320

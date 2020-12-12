@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1856229348">
+		<SoundBank Id="1355168291" Language="SFX" Hash="997192124">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3723224135">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3895612059">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -149,6 +149,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1398714217" Name="Play_sfx_train_steamwhistle" ObjectPath="\Events\Default Work Unit\Play_sfx_train_steamwhistle">
+					<IncludedMemoryFiles>
+						<File Id="24230732" Language="SFX">
+							<ShortName>sfx_train_steamwhistle.wav</ShortName>
+							<Path>SFX\sfx_train_steamwhistle_C20E2FFF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1197227163" Name="Play_sfx_tree_woosh" ObjectPath="\Events\Default Work Unit\Play_sfx_tree_woosh">
 					<IncludedMemoryFiles>
 						<File Id="675363489" Language="SFX">
@@ -160,6 +168,7 @@
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="733517689" Name="rtpc_radio_volume" ObjectPath="\Game Parameters\Default Work Unit\rtpc_radio_volume"/>
+				<GameParameter Id="1210142679" Name="rtpc_train_speed" ObjectPath="\Game Parameters\Default Work Unit\rtpc_train_speed"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
