@@ -9,13 +9,13 @@ He's never seen without a cigar and his trusty sabre.
 <<if visited("A1") is false>>
 [[About hands...|A1]]
 <<elseif visited("B1") is false>>
-[[About B...|B1]]
+//[[About B...|B1]]
 <<elseif visited("C1") is false>>
-[[About C...|C1]]
+//[[About C...|C1]]
 <<elseif visited("D1") is false>>
-[[About D...|D1]]
+//[[About D...|D1]]
 <<endif>>
-[[Thank you for your time.|End]]
+//[[Thank you for your time.|End]]
 ===
 title: B1
 tags: 
@@ -124,8 +124,8 @@ How can I find out their dominant hand?
 [[Feign a stumble|A13N]]
 [[Ask for a handshake|A14N]]
 
-[[A|A11N]]
-[[A|A12Y]]
-[[A|A13Y]]
-[[A|A14Y]]
+//[[A|A11N]]
+//[[A|A12Y]]
+//[[A|A13Y]]
+//[[A|A14Y]]
 ===
