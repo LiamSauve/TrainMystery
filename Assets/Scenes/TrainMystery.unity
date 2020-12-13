@@ -6804,7 +6804,7 @@ GameObject:
   - component: {fileID: 2003977255}
   - component: {fileID: 2003977258}
   m_Layer: 9
-  m_Name: Charles
+  m_Name: Poetian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6903,7 +6903,7 @@ MonoBehaviour:
   startNode: Start
   yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
     type: 3}
-  charID: 0
+  charID: 16
 --- !u!1 &2035190997
 GameObject:
   m_ObjectHideFlags: 0
@@ -8163,13 +8163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6bc2015b1dd404ea2ff54e135f23f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueStrings:
-  - Poetian
-  - 'The old war eagle. A legendary veteran, turned combat instructor to the Prince.
-
-    He''s
-    never seen without a cigar and his trusty sabre.'
-  - LEFT
 --- !u!1 &2153203688874955020
 GameObject:
   m_ObjectHideFlags: 0
