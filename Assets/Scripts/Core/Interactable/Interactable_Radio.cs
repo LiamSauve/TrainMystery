@@ -26,11 +26,6 @@ namespace TrainMystery
         {
             base.Update();
 
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                Interact();
-            }
-
             _currentVolume = Mathf.Lerp(_currentVolume, _targetVolume, 0.1f);
             AkSoundEngine.SetRTPCValue("rtpc_radio_volume", _currentVolume);
         }

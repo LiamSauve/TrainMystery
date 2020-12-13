@@ -21,8 +21,13 @@ namespace TrainMystery
         private PlayerGun _playerGun;
         [SerializeField]
         private PlayerNotebook _playerNotebook;
+        [SerializeField]
+        public int notebookPage = 21;
+
 
         private bool _hasShot = false;
+        private float _scrollTimer = 0f;
+        private static float MAX_SCROLL_TIME = 0.2f;
 
         void Start()
         {
@@ -63,6 +68,46 @@ namespace TrainMystery
             {
                 ShootGun();
             }
+
+            UpdateMouseWheel();
+        }
+
+        private void UpdateMouseWheel()
+        {
+            if(Input.GetKeyDown(KeyCode.P))
+            {
+                notebookPage++;
+            }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                notebookPage--;
+            }
+            //if (_scrollTimer > 0.2)
+            //{
+            //    var scrollwheel = Input.GetAxis("Mouse ScrollWheel");
+            //    if (scrollwheel > 0)
+            //    {
+            //        notebookPage++;
+            //    }
+            //    else if (scrollwheel < 0)
+            //    {
+            //        notebookPage--;
+            //    }
+            //
+                if(notebookPage > 25)
+                {
+                    notebookPage = 0;
+                }
+            
+                if (notebookPage < 0)
+                {
+                    notebookPage = 25;
+                }
+            //
+                TrainMysteryGameManager.Instance.uiCommands.SetPage(notebookPage);
+            //    _scrollTimer = 0;
+            //}
+            //_scrollTimer += deltaTime;
         }
 
         void LookForObjectInFront(float distance = 5, bool updateName = true, bool forced = false)

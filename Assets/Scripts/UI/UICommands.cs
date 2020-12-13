@@ -11,6 +11,8 @@ namespace TrainMystery
         [SerializeField]
         private TMP_Text _facedObjectLabel;
         [SerializeField]
+        private GameObject[] _notebookLabels;
+        [SerializeField]
         private TMP_Text _notebookLabel;
         [SerializeField]
         private GameObject _notebookEquipInput;
@@ -20,19 +22,36 @@ namespace TrainMystery
         private GameObject _gunShootInput;
         [SerializeField]
         private TMP_Text _timerLabel;
+        [SerializeField]
+        private CharacterData _characterData;
 
         public void SetFacedObjectLabel(string facedObjectName)
         {
             _facedObjectLabel.text = facedObjectName;
         }
 
-        public void AddNote(string note)
+        public void AddNote(int index, string note)
         {
             if (TrainMysteryGameManager.Instance.yarnVariables.GetValue("$NotebookEquipped").AsBool) // otherwise we don't add the note :P
             {
+                // get the right string,
+                var oldString = _characterData.notebookPages[index];
+
+                // add the note
+                var newNote = oldString + "\n - " + note;
+                _characterData.notebookPages[index] = newNote;
+
+                // display the new one
+                _notebookLabel.text = newNote;
+                SetPage(index);
+
                 AkSoundEngine.PostEvent("Play_sfx_notebook_write", Camera.main.gameObject);
-                _notebookLabel.text += "\n - " + note;
             }
+        }
+
+        public void SetPage(int index)
+        {
+            _notebookLabel.text = _characterData.notebookPages[index];
         }
 
         public void ShowNotebookInput(bool active)

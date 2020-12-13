@@ -25,9 +25,15 @@ namespace TrainMystery
         public override void Interact()
         {
             TrainMysteryGameManager.Instance.uiCommands.SetFacedObjectLabel(string.Empty);
-            variableStorage.SetValue("$convname", characterData.dialogueStrings[charID*3]); //set name (yarn vars in code must have $ at the start, but not in the inspector)
-            variableStorage.SetValue("$convdesc", characterData.dialogueStrings[charID*3+1]); //set description
-            variableStorage.SetValue("$convhand", characterData.dialogueStrings[charID*3+2]); //set handedness
+            //variableStorage.SetValue("$convname", characterData.dialogueStrings[charID*3]); //set name (yarn vars in code must have $ at the start, but not in the inspector)
+            //variableStorage.SetValue("$convdesc", characterData.dialogueStrings[charID*3+1]); //set description
+            //variableStorage.SetValue("$convhand", characterData.dialogueStrings[charID*3+2]); //set handedness
+
+            variableStorage.SetValue("$convname", characterData.dialogueStrings[charID].name); //set name (yarn vars in code must have $ at the start, but not in the inspector)
+            variableStorage.SetValue("$convdesc", characterData.dialogueStrings[charID].description); //set description
+            variableStorage.SetValue("$convhand", characterData.dialogueStrings[charID].handedness); //set handedness
+
+
             dialogueRunner.StartDialogue(startNode);
         }
     } 

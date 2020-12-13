@@ -4,6 +4,6 @@ colorID: 0
 position: 732,57
 ---
 Hi I'm Darren.
-<<DialogueCommand_AddNoteTest He's Darren!>> 
+<<DialogueCommand_AddNote 3 He's Darren!>>
 ya get that?
 ===
