@@ -18,94 +18,94 @@ position: 131,-161
 title: B1
 tags: 
 colorID: 0
-position: 496,-3
+position: 491,-225
 ---
 Empty Text
 ===
 title: C1
 tags: 
 colorID: 0
-position: 480,400
+position: 502,271
 ---
 Empty Text
 ===
 title: D1
 tags: 
 colorID: 0
-position: 484,796
+position: 557,939
 ---
 Empty Text
 ===
 title: End
 tags: 
 colorID: 0
-position: 148,206
+position: -55,343
 ---
 Goodbye message
 ===
-title: A11N
+title: A1N
 tags: 
 colorID: 0
-position: 749,-345
+position: 810,-689
 ---
 You ask for a light, but they don't smoke.
 [[Apologize.|Start]]
 ===
-title: A11Y
+title: A1Y
 tags: 
 colorID: 0
-position: 751,-572
+position: 808,-908
 ---
 You ask for a light, and they offer a lighter. You notice they are {$convhand}-handed.
 <<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
 [[Take it and light your cigarette.|Start]]
 ===
-title: A12N
+title: A2N
 tags: 
 colorID: 0
-position: 970,-351
+position: 1027,-687
 ---
 You ask for a pen, but they don't carry one.
 [[Thank them for checking.|Start]]
 ===
-title: A13N
+title: A3N
 tags: 
 colorID: 0
-position: 1192,-349
+position: 1246,-685
 ---
 You pretend to stumble, and they barely react as you catch yourself.
 [[Dust yourself off.|Start]]
 ===
-title: A14N
+title: A4N
 tags: 
 colorID: 0
-position: 1412,-356
+position: 1469,-692
 ---
 You introduce yourself, and they glance at your hand, uninterested.
 [[Withdraw your hand.|Start]]
 ===
-title: A12Y
+title: A2Y
 tags: 
 colorID: 0
-position: 966,-574
+position: 1023,-910
 ---
 You ask for a pen, and they hand you one. You notice they are {$convhand}-handed.
 <<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
 [[Take it and pretend to jot something down.|Start]]
 ===
-title: A13Y
+title: A3Y
 tags: 
 colorID: 0
-position: 1182,-579
+position: 1239,-918
 ---
 You pretend to stumble, and they catch your arm. You notice they are {$convhand}-handed.
 <<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
 [[Thank them for the help.|Start]]
 ===
-title: A14Y
+title: A4Y
 tags: 
 colorID: 0
-position: 1407,-579
+position: 1464,-915
 ---
 You introduce yourself, and they offer their hand for a handshake. You notice they are {$convhand}-handed.
 <<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
@@ -114,12 +114,139 @@ You introduce yourself, and they offer their hand for a handshake. You notice th
 title: A1
 tags: 
 colorID: 0
-position: 471,-465
+position: 501,-798
 ---
 How can I find out their dominant hand?
-[[Ask for a light|A11Y]]
-[[Ask for a pen|A12N]]
-[[Feign a stumble|A13N]]
-[[Ask for a handshake|A14N]]
+[[Ask for a light|A1Y]]
+[[Ask for a pen|A2N]]
+[[Feign a stumble|A3N]]
+[[Ask for a handshake|A4N]]
 [[Never mind.|Start]]
+===
+title: A3N_2
+tags: 
+colorID: 0
+position: 1212,-137
+---
+You pretend to stumble, and they barely react as you catch yourself.
+[[Dust yourself off.|Start]]
+===
+title: A2N_2
+tags: 
+colorID: 0
+position: 993,-139
+---
+You ask for a pen, but they don't carry one.
+[[Thank them for checking.|Start]]
+===
+title: A4N_2
+tags: 
+colorID: 0
+position: 1435,-144
+---
+You introduce yourself, and they glance at your hand, uninterested.
+[[Withdraw your hand.|Start]]
+===
+title: A1N_2
+tags: 
+colorID: 0
+position: 776,-141
+---
+You ask for a light, but they don't smoke.
+[[Apologize.|Start]]
+===
+title: A1Y_2
+tags: 
+colorID: 0
+position: 774,-360
+---
+You ask for a light, and they offer a lighter. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[Take it and light your cigarette.|Start]]
+===
+title: A2Y_2
+tags: 
+colorID: 0
+position: 989,-362
+---
+You ask for a pen, and they hand you one. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[Take it and pretend to jot something down.|Start]]
+===
+title: A3Y_2
+tags: 
+colorID: 0
+position: 1206,-360
+---
+You pretend to stumble, and they catch your arm. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[Thank them for the help.|Start]]
+===
+title: A4Y_2
+tags: 
+colorID: 0
+position: 1430,-367
+---
+You introduce yourself, and they offer their hand for a handshake. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[You shake their hand tentatively.|Start]]
+===
+title: A3N_3
+tags: 
+colorID: 0
+position: 1231,393
+---
+You pretend to stumble, and they barely react as you catch yourself.
+[[Dust yourself off.|Start]]
+===
+title: A2N_3
+tags: 
+colorID: 0
+position: 995,393
+---
+You ask for a pen, but they don't carry one.
+[[Thank them for checking.|Start]]
+===
+title: A4N_3
+tags: 
+colorID: 0
+position: 1451,392
+---
+You introduce yourself, and they glance at your hand, uninterested.
+[[Withdraw your hand.|Start]]
+===
+title: A1N_3
+tags: 
+colorID: 0
+position: 777,388
+---
+You ask for a light, but they don't smoke.
+[[Apologize.|Start]]
+===
+title: A1Y_3
+tags: 
+colorID: 0
+position: 779,167
+---
+You ask for a light, and they offer a lighter. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[Take it and light your cigarette.|Start]]
+===
+title: A2Y_3
+tags: 
+colorID: 0
+position: 996,166
+---
+You ask for a pen, and they hand you one. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[Take it and pretend to jot something down.|Start]]
+===
+title: A3Y_3
+tags: 
+colorID: 0
+position: 1231,164
+---
+You pretend to stumble, and they catch your arm. You notice they are {$convhand}-handed.
+<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
+[[Thank them for the help.|Start]]
 ===
