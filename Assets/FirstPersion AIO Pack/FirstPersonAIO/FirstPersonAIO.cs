@@ -92,6 +92,7 @@ public class FirstPersonAIO : MonoBehaviour {
     public bool lockAndHideCursor = false;
     public Camera playerCamera;
     public bool enableCameraShake=false;
+    public float startAngle = 45f;
     internal Vector3 cameraStartingPosition;
     float baseCamFOV;
     
@@ -308,10 +309,12 @@ public class FirstPersonAIO : MonoBehaviour {
                 StaminaMeter.rectTransform.sizeDelta = new Vector2(250,6);
                 StaminaMeter.color = new Color(0,0,0,0);
             }
+
         }
         cameraStartingPosition = playerCamera.transform.localPosition;
         if(lockAndHideCursor) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
         baseCamFOV = playerCamera.fieldOfView;
+        playerCamera.transform.localRotation = Quaternion.Euler(startAngle, 0, 0);
         #endregion
 
         #region Movement Settings - Start  
@@ -360,7 +363,7 @@ public class FirstPersonAIO : MonoBehaviour {
             targetAngles.x = Mathf.Clamp(targetAngles.x, -0.5f * verticalRotationRange, 0.5f * verticalRotationRange);
             followAngles = Vector3.SmoothDamp(followAngles, targetAngles, ref followVelocity, (cameraSmoothing)/100);
             
-            playerCamera.transform.localRotation = Quaternion.Euler(-followAngles.x + originalRotation.x,0,0);
+            playerCamera.transform.localRotation = Quaternion.Euler(-followAngles.x + originalRotation.x + startAngle,0,0);
             transform.localRotation =  Quaternion.Euler(0, followAngles.y+originalRotation.y, 0);
         }
     
@@ -974,6 +977,7 @@ public class FirstPersonAIO : MonoBehaviour {
             t.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Player Camera", "Camera attached to this controller"),t.playerCamera,typeof(Camera),true);
             if(!t.playerCamera){EditorGUILayout.HelpBox("A Camera is required for operation.",MessageType.Error);}
             t.enableCameraShake = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Shake?", "Call this Coroutine externally with duration ranging from 0.01 to 1, and a magnitude of 0.01 to 0.5."), t.enableCameraShake);
+            t.startAngle = EditorGUILayout.FloatField(new GUIContent("Start Angle", "the angle at which we start the player"), t.startAngle);
             t.lockAndHideCursor = EditorGUILayout.ToggleLeft(new GUIContent("Lock and Hide Cursor","For debuging or if You don't plan on having a pause menu or quit button."),t.lockAndHideCursor);
             t.autoCrosshair = EditorGUILayout.ToggleLeft(new GUIContent("Auto Crosshair","Determines if a basic crosshair will be generated."),t.autoCrosshair);
             if(t.autoCrosshair){EditorGUI.indentLevel++; EditorGUILayout.BeginHorizontal(); EditorGUILayout.PrefixLabel(new GUIContent("Crosshair","Sprite to use as a crosshair."));t.Crosshair = (Sprite)EditorGUILayout.ObjectField(t.Crosshair,typeof(Sprite),false); EditorGUILayout.EndHorizontal(); EditorGUI.indentLevel--;}

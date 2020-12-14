@@ -16,10 +16,10 @@ namespace TrainMystery
             dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
             variableStorage = dialogueRunner.GetComponent<InMemoryVariableStorage>();
             characterData = dialogueRunner.GetComponent<CharacterData>();
-            if (yarnProgram != null)
-            {
-                dialogueRunner.Add(yarnProgram);
-            }
+            //if (yarnProgram != null)
+            //{
+            //    dialogueRunner.Add(yarnProgram);
+            //}
         }
 
         public override void Interact()
@@ -37,6 +37,7 @@ namespace TrainMystery
             variableStorage.SetValue("$convwriteq", characterData.dialogueStrings[charID].writeQ);
             variableStorage.SetValue("$convcloth", characterData.dialogueStrings[charID].cloth);
             variableStorage.SetValue("$convclothq", characterData.dialogueStrings[charID].clothQ);
+            variableStorage.SetValue("$convid", charID);
 
             dialogueRunner.StartDialogue(startNode);
         }
