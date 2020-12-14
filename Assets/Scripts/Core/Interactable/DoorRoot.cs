@@ -13,7 +13,6 @@ namespace TrainMystery
 
         void OnTriggerExit(Collider other)
         {
-            Debug.Log("No longer in contact with " + other.transform.name);
             if(other.gameObject.GetComponent<Player>())
             {
                 if(_isOpened == false)
