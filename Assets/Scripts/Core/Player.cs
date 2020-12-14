@@ -27,7 +27,8 @@ namespace TrainMystery
 
         private bool _hasShot = false;
         private float _scrollTimer = 0f;
-        private static float MAX_SCROLL_TIME = 0.2f;
+        private static float MAX_SCROLL_TIME = 0.4f;
+        private bool firstScroll = true;
 
         void Start()
         {
@@ -74,40 +75,65 @@ namespace TrainMystery
 
         private void UpdateMouseWheel()
         {
-            if(Input.GetKeyDown(KeyCode.P))
-            {
-                notebookPage++;
-            }
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                notebookPage--;
-            }
-            //if (_scrollTimer > 0.2)
+            _scrollTimer += deltaTime;
+
+            //if (Input.GetKeyDown(KeyCode.P))
             //{
-            //    var scrollwheel = Input.GetAxis("Mouse ScrollWheel");
-            //    if (scrollwheel > 0)
-            //    {
-            //        notebookPage++;
-            //    }
-            //    else if (scrollwheel < 0)
-            //    {
-            //        notebookPage--;
-            //    }
-            //
-                if(notebookPage > 25)
-                {
-                    notebookPage = 0;
-                }
-            
-                if (notebookPage < 0)
-                {
-                    notebookPage = 25;
-                }
-            //
-                TrainMysteryGameManager.Instance.uiCommands.SetPage(notebookPage);
-            //    _scrollTimer = 0;
+            //    notebookPage++;
             //}
-            //_scrollTimer += deltaTime;
+            //if (Input.GetKeyDown(KeyCode.O))
+            //{
+            //    notebookPage--;
+            //}
+
+            if(_scrollTimer < MAX_SCROLL_TIME)
+            {
+
+            }
+
+            var scrollwheel = Input.GetAxis("Mouse ScrollWheel");
+            if (scrollwheel > 0)
+            {
+                _scrollTimer = 0f;
+                if(firstScroll)
+                {
+                    firstScroll = false;
+                    notebookPage = 21;
+                }
+                else
+                {
+                    notebookPage++;
+                    if (notebookPage > 25)
+                    {
+                        notebookPage = 0;
+                    }
+                }
+                TrainMysteryGameManager.Instance.uiCommands.SetPage(notebookPage);
+            }
+            else if (scrollwheel < 0)
+            {
+                _scrollTimer = 0f;
+                if (firstScroll)
+                {
+                    firstScroll = false;
+                    notebookPage = 21;
+                }
+                else
+                {
+                    notebookPage--;
+                    if (notebookPage < 0)
+                    {
+                        notebookPage = 25;
+                    }
+                }
+                TrainMysteryGameManager.Instance.uiCommands.SetPage(notebookPage);
+            }
+        }
+
+        public void SetPageIndex(int index)
+        {
+            notebookPage = index;
+            TrainMysteryGameManager.Instance.uiCommands.SetPage(notebookPage);
         }
 
         void LookForObjectInFront(float distance = 5, bool updateName = true, bool forced = false)
@@ -202,7 +228,6 @@ namespace TrainMystery
             LookForObjectInFront(100f, false, true);
             if (_facedInteractable && _facedInteractable is Interactable_NPC)
             {
-
                 TrainMysteryGameManager.Instance.GameOver_Murderer(_facedInteractable.gameObject.name);
             }
             else

@@ -65,6 +65,11 @@ namespace TrainMystery
             UpdateTimer();
         }
 
+        public Player GetPlayer()
+        {
+            return _player.GetComponent<Player>();
+        }
+
         private void UpdateTimer()
         {
             if(startGameTimer)

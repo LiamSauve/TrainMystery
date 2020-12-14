@@ -43,15 +43,19 @@ namespace TrainMystery
 
                 // display the new one
                 _notebookLabel.text = newNote;
-                SetPage(index);
-
                 AkSoundEngine.PostEvent("Play_sfx_notebook_write", Camera.main.gameObject);
+                if(TrainMysteryGameManager.Instance.GetPlayer().notebookPage != index)
+                {
+                    // will call set page
+                    TrainMysteryGameManager.Instance.GetPlayer().SetPageIndex(index);
+                }
             }
         }
 
         public void SetPage(int index)
         {
             _notebookLabel.text = _characterData.notebookPages[index];
+            AkSoundEngine.PostEvent("Play_sfx_notebook_equip", Camera.main.gameObject);
         }
 
         public void ShowNotebookInput(bool active)
