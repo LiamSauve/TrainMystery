@@ -19,6 +19,14 @@ namespace TrainMystery
         public int RolloverCharacterSpread = 10;
         public Color ColorTint;
 
+        public void SetIntroText(string handedness, string handwriting, string cloth)
+        {
+            string s = introText.text;
+            s = string.Format(s, handedness, handwriting, cloth);
+
+            introText.text = s;
+        }
+
         protected override void Update()
         {
             base.Update();

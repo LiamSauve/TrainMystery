@@ -3934,6 +3934,8 @@ MonoBehaviour:
   - {fileID: 380012577}
   - {fileID: 1754339217}
   timer: 901
+  characterData: {fileID: 2153203688864159873}
+  murderer: 
 --- !u!4 &188790951
 Transform:
   m_ObjectHideFlags: 0
@@ -8621,6 +8623,16 @@ PrefabInstance:
       propertyPath: lockAndHideCursor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5987562786063557001, guid: d545d3a2ec8ee644093a4a13da4d15f0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0362
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987562786063557001, guid: d545d3a2ec8ee644093a4a13da4d15f0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2127
+      objectReference: {fileID: 0}
     - target: {fileID: 7647477404350496569, guid: d545d3a2ec8ee644093a4a13da4d15f0,
         type: 3}
       propertyPath: m_text
@@ -8629,7 +8641,7 @@ PrefabInstance:
     - target: {fileID: 7647477404350496569, guid: d545d3a2ec8ee644093a4a13da4d15f0,
         type: 3}
       propertyPath: m_fontSize
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 7647477404350496569, guid: d545d3a2ec8ee644093a4a13da4d15f0,
         type: 3}
@@ -8651,7 +8663,7 @@ PrefabInstance:
     - target: {fileID: 7647477404350496569, guid: d545d3a2ec8ee644093a4a13da4d15f0,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 7647477404350496569, guid: d545d3a2ec8ee644093a4a13da4d15f0,
         type: 3}
@@ -16098,7 +16110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1169118551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16168,7 +16180,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169919525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.67}
+  m_LocalPosition: {x: 0, y: 0, z: -0.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184833965}
@@ -16176,7 +16188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.45, y: 0.46999916}
+  m_AnchoredPosition: {x: -0.402, y: 0.496}
   m_SizeDelta: {x: 0.92, y: 1.02}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1169919527
@@ -16227,8 +16239,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3.42
-  m_fontSizeBase: 3.42
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22290,16 +22302,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Prince has been slain. Their murderer is aboard this train. You are
-    not a murderer, but by the end of the day you aim to be.
+  m_text: 'The Prince has been slain.
+
+    Their murderer is aboard this train. You
+    are not a murderer, but by the end of the day you aim to be.
 
 
     You know this
-    much: The murderer was ???-handed. The murderer''s note was written in ???-script.
-    The murderer was wearing a ??? cloak.
+    much: The murderer was {0}-handed. The murderer''s note was written in {1}-script.
+    The murderer was wearing a {2} cloak.
 
 
-    Use your notebook. Find them. No
+    Use your notebook.
+
+    Find them.
+
+    No
     mistakes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3515df3b575b1d4498c6245d4eb28873, type: 2}
@@ -26629,7 +26647,19 @@ MonoBehaviour:
         m_CallState: 2
   onNodeComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058111161}
+        m_TargetAssemblyTypeName: NodeVisitedTracker, Assembly-CSharp
+        m_MethodName: NodeComplete
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls:

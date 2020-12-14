@@ -122,10 +122,5 @@ namespace TrainMystery
         "Y",
         "Z"
     };
-
-        void Start()
-        {
-
-        }
     } 
 }

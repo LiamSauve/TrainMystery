@@ -43,6 +43,15 @@ namespace TrainMystery
         private bool doCommenceGameOver = false;
         private float _currentTrainVolume = 1;
 
+        public CharacterData characterData;
+
+        public string murderer;
+        //public string HANDEDNESS;
+        //public string WRITING;
+        //public string CLOTH;
+
+        static System.Random random = new System.Random();
+
         protected override void Awake()
         {
             base.Awake();
@@ -54,7 +63,7 @@ namespace TrainMystery
             {
                 _instance = this;
             }
-
+            InitialzeGame();
             BeginIntroduction();
         }
 
@@ -63,6 +72,31 @@ namespace TrainMystery
             base.Update();
 
             UpdateTimer();
+        }
+
+        private void InitialzeGame()
+        {
+            var data = characterData.dialogueStrings;
+            var index = random.Next(data.Length);
+            //var index = 15; // lil test value
+
+            murderer = data[index].name;
+
+            var HANDEDNESS = data[index].handedness;
+            var WRITING = data[index].writing;
+            var CLOTH = data[index].cloth;
+            Debug.Log(HANDEDNESS);
+            Debug.Log(WRITING);
+            Debug.Log(CLOTH);
+            Debug.Log(data[index].name);
+
+            introduction.SetIntroText(HANDEDNESS, WRITING, CLOTH);
+            var notebookPage = 21;
+            var selfNote = characterData.notebookPages[notebookPage];
+            selfNote += "\n<u>" + HANDEDNESS + "</u>";
+            selfNote += "\n<u>" + WRITING + "</u>";
+            selfNote += "\n<u>" + CLOTH + "</u>";
+            characterData.notebookPages[notebookPage] = selfNote;
         }
 
         public Player GetPlayer()
@@ -101,6 +135,18 @@ namespace TrainMystery
             }
         }
 
+        public void ShotSomeone(string name)
+        {
+            if (string.Equals(name, murderer))
+            {
+                GameOver_Success(murderer);
+            }
+            else
+            {
+                GameOver_Murderer(name);
+            }
+        }
+
         public void GameOver_User()
         {
             startGameTimer = false;
@@ -130,7 +176,7 @@ namespace TrainMystery
             gameOver.Begin_TimeOut();
         }
 
-        public void GameOver_Murderer(string murdereredName)
+        public void GameOver_Success(string murdererName)
         {
             startGameTimer = false;
             PausePlayerController();
@@ -141,7 +187,21 @@ namespace TrainMystery
             uiCommands.ShowShootInput(false);
             uiCommands.ShowTimer(false);
 
-            gameOver.Begin_Murderer(murdereredName);
+            gameOver.Begin_Success(murdererName);
+        }
+
+        public void GameOver_Murderer(string victimName)
+        {
+            startGameTimer = false;
+            PausePlayerController();
+
+            uiCommands.SetFacedObjectLabel(string.Empty);
+            uiCommands.ShowNotebookInput(false);
+            uiCommands.ShowGunInput(false);
+            uiCommands.ShowShootInput(false);
+            uiCommands.ShowTimer(false);
+
+            gameOver.Begin_Murderer(victimName);
         }
 
         public void GameOver_ShotNothing()

@@ -50,12 +50,23 @@ namespace TrainMystery
             Blackout();
         }
 
-        public void Begin_Murderer(string murdereredName)
+        public void Begin_Success(string murdererName)
         {
             gameOverType = GameOverType.murderer;
             gameObject.SetActive(true);
 
-            var t = string.Format(MurdererText, murdereredName);
+            var t = string.Format(SuccesfulText, murdererName);
+            gameOverText.text = t;
+
+            Blackout();
+        }
+
+        public void Begin_Murderer(string victimName)
+        {
+            gameOverType = GameOverType.murderer;
+            gameObject.SetActive(true);
+
+            var t = string.Format(MurdererText, victimName);
             gameOverText.text = t;
 
             Blackout();

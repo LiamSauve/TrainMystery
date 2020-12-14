@@ -239,7 +239,8 @@ namespace TrainMystery
             LookForObjectInFront(100f, false, true);
             if (_facedInteractable && _facedInteractable is Interactable_NPC)
             {
-                TrainMysteryGameManager.Instance.GameOver_Murderer(_facedInteractable.gameObject.name);
+                TrainMysteryGameManager.Instance.ShotSomeone(_facedInteractable.gameObject.name);
+
             }
             else
             {
