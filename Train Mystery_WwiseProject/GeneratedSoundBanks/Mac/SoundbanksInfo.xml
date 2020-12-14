@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="979587526">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3515590477">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -46,6 +46,22 @@
 						<File Id="936336130" Language="SFX">
 							<ShortName>mus_lupe_64kb.wav</ShortName>
 							<Path>SFX\mus_lupe_64kb_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3200385525" Name="Play_sfx_door_jiggle" ObjectPath="\Events\Default Work Unit\Play_sfx_door_jiggle">
+					<IncludedMemoryFiles>
+						<File Id="105390623" Language="SFX">
+							<ShortName>sfx_door_jiggle.wav</ShortName>
+							<Path>SFX\sfx_door_jiggle_72AF9764.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1312371701" Name="Play_sfx_door_open" ObjectPath="\Events\Default Work Unit\Play_sfx_door_open">
+					<IncludedMemoryFiles>
+						<File Id="200612701" Language="SFX">
+							<ShortName>sfx_door_open.wav</ShortName>
+							<Path>SFX\sfx_door_open_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

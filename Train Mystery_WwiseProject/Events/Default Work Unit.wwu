@@ -129,6 +129,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_door_jiggle" ID="{1B9DD299-D3DE-4808-97A2-9DDB6253E079}">
+					<ChildrenList>
+						<Action Name="" ID="{2007AF7A-0047-4862-8CF3-FCC2A7429513}" ShortID="160257675">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_door_jiggle" ID="{8C42FBB7-87C8-41E7-A99A-186FEF132984}" WorkUnitID="{8B60764B-DD25-45FB-B0AD-E2B66A9A2727}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

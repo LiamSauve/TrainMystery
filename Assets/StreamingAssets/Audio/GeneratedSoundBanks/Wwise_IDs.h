@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_MUS_RADIO = 2966579327U;
+        static const AkUniqueID PLAY_SFX_DOOR_JIGGLE = 3200385525U;
+        static const AkUniqueID PLAY_SFX_DOOR_OPEN = 1312371701U;
         static const AkUniqueID PLAY_SFX_FOOTSTEP = 57417936U;
         static const AkUniqueID PLAY_SFX_GUN_EQUIP = 2278091865U;
         static const AkUniqueID PLAY_SFX_GUN_SHOOT = 1263427304U;

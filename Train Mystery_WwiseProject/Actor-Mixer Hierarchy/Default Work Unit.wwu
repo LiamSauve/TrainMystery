@@ -320,7 +320,7 @@
 													</Point>
 													<Point>
 														<XPos>1</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -479,6 +479,46 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="sfx_train_steamwhistle" ID="{E38A2FB8-198F-4D66-9EBE-07AC26E382D4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_door_jiggle" ID="{8C42FBB7-87C8-41E7-A99A-186FEF132984}" ShortID="127919709">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{588488C9-4440-4CFA-A603-B7CCD6DEB4CE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_door_jiggle" ID="{7FAC8201-ACAD-401E-9BCA-3672184AB58B}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.111585300215488"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.111585300215488"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>sfx_door_jiggle.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="105390623"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_door_jiggle" ID="{7FAC8201-ACAD-401E-9BCA-3672184AB58B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -790,6 +830,20 @@
 						<Folder Name="notebook" ID="{E12E3015-BD65-4C5A-BB5B-CBE7F6758B8B}" ShortID="343321064">
 							<ChildrenList>
 								<Sound Name="sfx_notebook_equip" ID="{1B1C474A-1478-4E07-85AC-A7B615E6A4DA}" ShortID="4627044">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B562F4FE-DD43-44D0-A295-EE029FF511AB}"/>

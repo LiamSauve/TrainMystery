@@ -11,6 +11,7 @@
 						<ObjectRef Name="Play_sfx_radio_click" ID="{C75A85B8-BE6D-43A3-A5F8-26BB8ACAA564}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_mus_radio" ID="{6EF16F88-9830-43EB-A278-4D29CB240851}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_tree_woosh" ID="{6C17802B-7663-4422-975E-1030A6FE7898}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_door_jiggle" ID="{1B9DD299-D3DE-4808-97A2-9DDB6253E079}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_gun_equip" ID="{48CF3B12-67B3-4911-A213-ACCE49EA2E67}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_train_steamwhistle" ID="{2C48FDD8-AE34-4943-A9AE-FCECB705F591}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_notebook_write" ID="{DCAE9DD2-B54D-4E3B-9C28-72D66CE719F9}" WorkUnitID="{B0DA630F-2042-4C7D-A992-2658649DE9DD}" Origin="Manual" Filter="7"/>
