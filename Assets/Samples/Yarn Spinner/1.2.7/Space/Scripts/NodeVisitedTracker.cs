@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TrainMystery;
 using UnityEngine;
 
 // Field ... is never assigned to and will always have its default value null
@@ -11,6 +12,7 @@ public class NodeVisitedTracker : MonoBehaviour
     // The dialogue runner that we want to attach the 'visited' function to
 #pragma warning disable 0649
     [SerializeField] Yarn.Unity.DialogueRunner dialogueRunner;
+    [SerializeField] CharacterData characterData;
 #pragma warning restore 0649
 
     private HashSet<string> _visitedNodes = new HashSet<string>();
@@ -22,7 +24,11 @@ public class NodeVisitedTracker : MonoBehaviour
         dialogueRunner.AddFunction("visited", 1, delegate (Yarn.Value[] parameters)
         {
             var nodeName = parameters[0];
-            return _visitedNodes.Contains(nodeName.AsString);
+            var index = (int)TrainMysteryGameManager.Instance.yarnVariables.GetValue("$convid").AsNumber;
+            var charName = characterData.dialogueStrings[index].name;
+            var entryName = nodeName.AsString + "_" + charName;
+
+            return _visitedNodes.Contains(entryName);
         });
 
     }
@@ -31,7 +37,11 @@ public class NodeVisitedTracker : MonoBehaviour
     // running. 
     public void NodeComplete(string nodeName) {
         // Log that the node has been run.
-        _visitedNodes.Add(nodeName);
+        var index = (int)TrainMysteryGameManager.Instance.yarnVariables.GetValue("$convid").AsNumber;
+        var charName = characterData.dialogueStrings[index].name;
+        var entryName = nodeName + "_" + charName;
+
+        _visitedNodes.Add(entryName);
     }
 
 
