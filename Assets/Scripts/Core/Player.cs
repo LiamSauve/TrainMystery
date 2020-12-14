@@ -27,7 +27,7 @@ namespace TrainMystery
 
         private bool _hasShot = false;
         private float _scrollTimer = 0f;
-        private static float MAX_SCROLL_TIME = 0.4f;
+        private static float MAX_SCROLL_TIME = 0.3f;
         private bool firstScroll = true;
 
         void Start()

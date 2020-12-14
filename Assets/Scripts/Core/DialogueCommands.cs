@@ -29,6 +29,17 @@ namespace TrainMystery
             TrainMysteryGameManager.Instance.SetGameState(GameState.running);
         }
 
+        private void Update()
+        {
+            if(dialogueRunner.IsDialogueRunning)
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    gameObject.GetComponent<DialogueUI>().MarkLineComplete();
+                }
+            }
+        }
+
 
         // commands from dialogue
         private void DialogueCommand_Test(string[] parameters)
