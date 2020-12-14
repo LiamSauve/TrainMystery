@@ -77,8 +77,14 @@ namespace TrainMystery
         private void InitialzeGame()
         {
             var data = characterData.dialogueStrings;
-            var index = random.Next(data.Length);
+            int index = -1; // random.Next(data.Length);
             //var index = 15; // lil test value
+
+            while (index == -1 || index == 13 || index == 21) // set to any but these
+            {
+                Debug.Log("index = " + index);
+                index = random.Next(data.Length);
+            }
 
             murderer = data[index].name;
 
@@ -90,13 +96,13 @@ namespace TrainMystery
             Debug.Log(CLOTH);
             Debug.Log(data[index].name);
 
-            introduction.SetIntroText(HANDEDNESS, WRITING, CLOTH);
-            var notebookPage = 21;
-            var selfNote = characterData.notebookPages[notebookPage];
-            selfNote += "\n<u>" + HANDEDNESS + "</u>";
-            selfNote += "\n<u>" + WRITING + "</u>";
-            selfNote += "\n<u>" + CLOTH + "</u>";
-            characterData.notebookPages[notebookPage] = selfNote;
+           //introduction.SetIntroText(HANDEDNESS, WRITING, CLOTH);
+           //var notebookPage = 21;
+           //var selfNote = characterData.notebookPages[notebookPage];
+           //selfNote += "\n<u>" + HANDEDNESS + "</u>";
+           //selfNote += "\n<u>" + WRITING + "</u>";
+           //selfNote += "\n<u>" + CLOTH + "</u>";
+           //characterData.notebookPages[notebookPage] = selfNote;
         }
 
         public Player GetPlayer()

@@ -254,6 +254,7 @@ public class FirstPersonAIO : MonoBehaviour {
 
         #region Look Settings - Awake
         originalRotation = transform.localRotation.eulerAngles;
+        targetAngles = new Vector3(-startAngle, 0f, 0f);
 
         #endregion 
 
@@ -314,7 +315,6 @@ public class FirstPersonAIO : MonoBehaviour {
         cameraStartingPosition = playerCamera.transform.localPosition;
         if(lockAndHideCursor) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
         baseCamFOV = playerCamera.fieldOfView;
-        playerCamera.transform.localRotation = Quaternion.Euler(startAngle, 0, 0);
         #endregion
 
         #region Movement Settings - Start  
@@ -363,7 +363,7 @@ public class FirstPersonAIO : MonoBehaviour {
             targetAngles.x = Mathf.Clamp(targetAngles.x, -0.5f * verticalRotationRange, 0.5f * verticalRotationRange);
             followAngles = Vector3.SmoothDamp(followAngles, targetAngles, ref followVelocity, (cameraSmoothing)/100);
             
-            playerCamera.transform.localRotation = Quaternion.Euler(-followAngles.x + originalRotation.x + startAngle,0,0);
+            playerCamera.transform.localRotation = Quaternion.Euler(-followAngles.x + originalRotation.x,0,0);
             transform.localRotation =  Quaternion.Euler(0, followAngles.y+originalRotation.y, 0);
         }
     
