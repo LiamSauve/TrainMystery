@@ -88,14 +88,19 @@ namespace TrainMystery
 
             if(_scrollTimer < MAX_SCROLL_TIME)
             {
-
+                return;
             }
 
             var scrollwheel = Input.GetAxis("Mouse ScrollWheel");
             if (scrollwheel > 0)
             {
                 _scrollTimer = 0f;
-                if(firstScroll)
+                if (TrainMysteryGameManager.Instance.yarnVariables.GetValue("$NotebookEquipped").AsBool != true)
+                {
+                    return;
+                }
+
+                if (firstScroll)
                 {
                     firstScroll = false;
                     notebookPage = 21;
@@ -113,6 +118,11 @@ namespace TrainMystery
             else if (scrollwheel < 0)
             {
                 _scrollTimer = 0f;
+                if (TrainMysteryGameManager.Instance.yarnVariables.GetValue("$NotebookEquipped").AsBool != true)
+                {
+                    return;
+                }
+
                 if (firstScroll)
                 {
                     firstScroll = false;
