@@ -132,6 +132,7 @@ namespace TrainMystery
 
         public void SetPageIndex(int index)
         {
+            firstScroll = false;
             notebookPage = index;
             TrainMysteryGameManager.Instance.uiCommands.SetPage(notebookPage);
         }
