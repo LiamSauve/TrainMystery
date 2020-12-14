@@ -82,7 +82,6 @@ namespace TrainMystery
 
             while (index == -1 || index == 13 || index == 21) // set to any but these
             {
-                Debug.Log("index = " + index);
                 index = random.Next(data.Length);
             }
 
@@ -96,13 +95,13 @@ namespace TrainMystery
             Debug.Log(CLOTH);
             Debug.Log(data[index].name);
 
-           //introduction.SetIntroText(HANDEDNESS, WRITING, CLOTH);
-           //var notebookPage = 21;
-           //var selfNote = characterData.notebookPages[notebookPage];
-           //selfNote += "\n<u>" + HANDEDNESS + "</u>";
-           //selfNote += "\n<u>" + WRITING + "</u>";
-           //selfNote += "\n<u>" + CLOTH + "</u>";
-           //characterData.notebookPages[notebookPage] = selfNote;
+           introduction.SetIntroText(HANDEDNESS, WRITING, CLOTH);
+           var notebookPage = 21;
+           var selfNote = characterData.notebookPages[notebookPage];
+           selfNote += "\n<u>" + HANDEDNESS + "</u>";
+           selfNote += "\n<u>" + WRITING + "</u>";
+           selfNote += "\n<u>" + CLOTH + "</u>";
+           characterData.notebookPages[notebookPage] = selfNote;
         }
 
         public Player GetPlayer()
