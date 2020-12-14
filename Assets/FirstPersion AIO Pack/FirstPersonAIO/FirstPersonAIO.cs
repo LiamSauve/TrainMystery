@@ -314,7 +314,6 @@ public class FirstPersonAIO : MonoBehaviour {
         cameraStartingPosition = playerCamera.transform.localPosition;
         if(lockAndHideCursor) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
         baseCamFOV = playerCamera.fieldOfView;
-        Debug.Log("start camera at angle:" + startAngle);
         playerCamera.transform.localRotation = Quaternion.Euler(startAngle, 0, 0);
         #endregion
 
