@@ -486,6 +486,7 @@ MonoBehaviour:
   _checkFacedObjectMax: 0.1
   _playerGun: {fileID: 1673930739628422179}
   _playerNotebook: {fileID: 1627897641335200846}
+  notebookPage: 21
 --- !u!81 &366897165
 AudioListener:
   m_ObjectHideFlags: 0
@@ -769,7 +770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Notes:'
+  m_text: Scroll <sprite=5> to flip pages
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 017c06ad8df47e8488311cf5c3fe8a5c, type: 2}
   m_sharedMaterial: {fileID: -6923651599919579020, guid: 017c06ad8df47e8488311cf5c3fe8a5c,
@@ -789,7 +790,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 0797b4b87beae5a459479e88d434d6dc, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -903,7 +904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f26af6fd78baba64e8ee535bf627b554, type: 2}
+  - {fileID: 2100000, guid: efdebcb7aae91164686b3bffa4bf683a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -16,7 +16,7 @@ namespace TrainMystery
             Debug.Log("No longer in contact with " + other.transform.name);
             if(other.gameObject.GetComponent<Player>())
             {
-                AkSoundEngine.PostEvent("Play_sfx_door_open", this.gameObject);
+                AkSoundEngine.PostEvent("Play_sfx_door_open", door.gameObject);
                 _isOpened = false;
             }
         }
