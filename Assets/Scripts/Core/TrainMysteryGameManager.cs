@@ -80,7 +80,10 @@ namespace TrainMystery
             int index = -1; // random.Next(data.Length);
             //var index = 15; // lil test value
 
-            while (index == -1 || index == 13 || index == 21) // set to any but these
+            var n_index = 13;
+            var v_index = 21;
+
+            while (index == -1 || index == n_index || index == v_index) // set to any but these
             {
                 index = random.Next(data.Length);
             }
@@ -96,7 +99,7 @@ namespace TrainMystery
             Debug.Log(data[index].name);
 
            introduction.SetIntroText(HANDEDNESS, WRITING, CLOTH);
-           var notebookPage = 21;
+           var notebookPage = v_index;
            var selfNote = characterData.notebookPages[notebookPage];
            selfNote += "\n<u>" + HANDEDNESS + "</u>";
            selfNote += "\n<u>" + WRITING + "</u>";
