@@ -22071,8 +22071,13 @@ MonoBehaviour:
     not a murderer, but by the end of the day you aim to be.
 
 
-    Use your notebook.
-    Find them. No mistakes.'
+    You know this
+    much: The murderer was ???-handed. The murderer''s note was written in ???-script.
+    The murderer was wearing a ??? cloak.
+
+
+    Use your notebook. Find them. No
+    mistakes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3515df3b575b1d4498c6245d4eb28873, type: 2}
   m_sharedMaterial: {fileID: -2764979889978787519, guid: 3515df3b575b1d4498c6245d4eb28873,
