@@ -1,45 +1,77 @@
 title: Start
 tags: 
 colorID: 0
-position: 131,-161
+position: 129,-158
 ---
 {$convname}. {$convdesc}
-<<if visited("Fact A") is false>>
-[[About hands...|Fact A]]
-<<elseif visited("Fact B") is false>>
-[[About B...|Fact B]]
-<<elseif visited("Fact C") is false>>
-[[About C...|Fact C]]
-<<elseif visited("Fact D") is false>>
-[[About D...|Fact D]]
+<<if visited("FactA") is false>>
+[[About hands...|FactA]]
+<<endif>>
+<<if visited("FactB") is false>>
+[[About writing style...|FactB]]
+<<endif>>
+<<if visited("FactC") is false>>
+[[About cloak fibers...|FactC]]
 <<endif>>
 [[Thank you for your time.|End]]
 ===
-title: Fact B
+title: FactB
 tags: 
 colorID: 0
-position: 812,-481
+position: 812,-480
 ---
-How can I find out FACT B?
-[[Option 1|B1Y]]
-[[Option 2|B2N]]
-[[Option 3|B3N]]
-[[Option 4|B4N]]
+How can I find out their writing style?
+<<if $convwriteq eq 1>>
+[[Request a formal comment on the murder|B1Y]]
+<<elseif $convwriteq neq 1>>
+[[Request a formal comment on the murder|B1N]]
+<<endif>>
+<<if $convwriteq eq 2>>
+[[Subtly observe their writing|B2Y]]
+<<elseif $convwriteq neq 2>>
+[[Subtly observe their writing|B2N]]
+<<endif>>
+<<if $convwriteq eq 3>>
+[[Request help with spelling|B3Y]]
+<<elseif $convwriteq neq 3>>
+[[Request help with spelling|B3N]]
+<<endif>>
+<<if $convwriteq eq 4>>
+[[Ask for an autograph|B4Y]]
+<<elseif $convwriteq neq 4>>
+[[Ask for an autograph|B4N]]
+<<endif>>
 [[Never mind.|Start]]
 ===
-title: Fact C
+title: FactC
 tags: 
 colorID: 0
 position: 839,179
 ---
-How can I find out FACT C?
-[[Option 1|C1Y]]
-[[Option 2|C2N]]
-[[Option 3|C3N]]
-[[Option 4|C4N]]
+How can I check their clothes for fibers?
+<<if $convclothq eq 1>>
+[[Simply walk up and look closely|C1Y]]
+<<elseif $convclothq neq 1>>
+[[Simply walk up and look closely|C1N]]
+<<endif>>
+<<if $convclothq eq 2>>
+[[Brush some dust off their shoulder|C2Y]]
+<<elseif $convclothq neq 2>>
+[[Brush some dust off their shoulder|C2N]]
+<<endif>>
+<<if $convclothq eq 3>>
+[[Wait for them to remove their coat|C3Y]]
+<<elseif $convclothq neq 3>>
+[[Wait for them to remove their coat|C3N]]
+<<endif>>
+<<if $convclothq eq 4>>
+[[Ask to sit next to them|C4Y]]
+<<elseif $convclothq neq 4>>
+[[Ask to sit next to them|C4N]]
+<<endif>>
 [[Never mind.|Start]]
 ===
-title: Fact D
+title: FactD
 tags: 
 colorID: 0
 position: 149,941
@@ -126,16 +158,32 @@ You introduce yourself, and they offer their hand for a handshake. You notice th
 <<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
 [[You shake their hand tentatively.|Start]]
 ===
-title: Fact A
+title: FactA
 tags: 
 colorID: 0
-position: 135,-1153
+position: 133,-1152
 ---
 How can I find out their dominant hand?
+<<if $convhandq eq 1>>
 [[Ask for a light|A1Y]]
+<<elseif $convhandq neq 1>>
+[[Ask for a light|A1N]]
+<<endif>>
+<<if $convhandq eq 2>>
+[[Ask for a pen|A2Y]]
+<<elseif $convhandq neq 2>>
 [[Ask for a pen|A2N]]
+<<endif>>
+<<if $convhandq eq 3>>
+[[Feign a stumble|A3Y]]
+<<elseif $convhandq neq 3>>
 [[Feign a stumble|A3N]]
+<<endif>>
+<<if $convhandq eq 4>>
+[[Ask for a handshake|A4Y]]
+<<elseif $convhandq neq 4>>
 [[Ask for a handshake|A4N]]
+<<endif>>
 [[Never mind.|Start]]
 ===
 title: B3N
@@ -143,136 +191,136 @@ tags:
 colorID: 0
 position: 1643,-384
 ---
-Failure 3.
-[[Failure 3|Start]]
+You ask for help spelling a difficult word. They are either unable to help you, or refuse to do so.
+[[Excuse yourself|Start]]
 ===
 title: B2N
 tags: 
 colorID: 0
 position: 1424,-386
 ---
-Failure 2.
-[[Failure 2.|Start]]
+You sneak up and glance over their shoulder. They seem guarded about their notes and books, and you fail to catch a glimpse.
+[[Pretend to have never looked|Start]]
 ===
 title: B4N
 tags: 
 colorID: 0
 position: 1864,-393
 ---
-Failure 4
-[[Failure 4|Start]]
+You ask for an autograph, and they are confused by the request.
+[[Apologize and extricate yourself|Start]]
 ===
 title: B1N
 tags: 
 colorID: 0
 position: 1203,-388
 ---
-Failure 1.
-[[Failure 1.|Start]]
+You ask for a written comment on the murder. They offer their opinions but do not seem to understand the request.
+[[Thank them anyway|Start]]
 ===
 title: B1Y
 tags: 
 colorID: 0
 position: 1206,-609
 ---
-Success 1. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 1.|Start]]
+You request a formal comment on the murder, and they write one out. You notice they write in a {$convwrite} style.
+<<DialogueCommand_AddNoteTest {$convname} writes {$convwrite}.>> 
+[[Thank them for their candor|Start]]
 ===
 title: B2Y
 tags: 
 colorID: 0
 position: 1420,-609
 ---
-Success 2. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 2.|Start]]
+They write openly and you easily observe their penmanship. You notice they write in a {$convwrite} style.
+<<DialogueCommand_AddNoteTest {$convname} writes {$convwrite}.>> 
+[[Sidle away unnoticed|Start]]
 ===
 title: B3Y
 tags: 
 colorID: 0
 position: 1637,-607
 ---
-Success 3. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 3.|Start]]
+They seem keen to demonstrate their knowledge, and write out the correct spelling. You notice they write in a {$convwrite} style.
+<<DialogueCommand_AddNoteTest {$convname} writes {$convwrite}.>> 
+[[Thank them for the help|Start]]
 ===
 title: B4Y
 tags: 
 colorID: 0
 position: 1861,-616
 ---
-Success 4. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 4.|Start]]
+You ask for an autograph, and they kindly oblige. You notice they write in a {$convwrite} style.
+<<DialogueCommand_AddNoteTest {$convname} writes {$convwrite}.>> 
+[[Thank them for the courtesy|Start]]
 ===
 title: C3N
 tags: 
 colorID: 0
 position: 1658,294
 ---
-Failure 3.
-[[Failure 3|Start]]
+You wait for a moment to check their coat, but they do not seem to change clothes often enough to leave them unattended.
+[[Move on to avoid wasting more time|Start]]
 ===
 title: C2N
 tags: 
 colorID: 0
 position: 1439,292
 ---
-Failure 2.
-[[Failure 2.|Start]]
+You move overtly to dust off their coat, but they bristle at the idea that their clothes might be out of order, and withdraw.
+[[Apologize and retreat|Start]]
 ===
 title: C4N
 tags: 
 colorID: 0
-position: 1879,285
+position: 1881,296
 ---
-Failure 4
-[[Failure 4|Start]]
+You ask to sit alongside them. Either busy or wary, they claim to need the space, and refuse.
+[[Walk away from the seat|Start]]
 ===
 title: C1N
 tags: 
 colorID: 0
 position: 1218,290
 ---
-Failure 1.
-[[Failure 1.|Start]]
+You overtly stare at them intently. They notice your presence and seem unnerved or suspicious, and shy away.
+[[Glance away|Start]]
 ===
 title: C1Y
 tags: 
 colorID: 0
-position: 1221,69
+position: 1217,69
 ---
-Success 1. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 1.|Start]]
+You overtly stare at them intently. Unobservant, occupied with themselves, they do not notice you picking a {$convcloth} thread from their coat.
+<<DialogueCommand_AddNoteTest {$convname} was carrying {$convcloth} thread.>> 
+[[Move away before they notice|Start]]
 ===
 title: C2Y
 tags: 
 colorID: 0
 position: 1435,69
 ---
-Success 2. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 2.|Start]]
+You move overtly to dust off their coat, and they thank you for the consideration.
+<<DialogueCommand_AddNoteTest {$convname} was carrying {$convcloth} thread.>> 
+[[Assure them it is nothing|Start]]
 ===
 title: C3Y
 tags: 
 colorID: 0
 position: 1652,71
 ---
-Success 3. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 3.|Start]]
+Their frequent outfit changes give you multiple chances to confirm the presence of {$convcloth} fibres among their clothes.
+<<DialogueCommand_AddNoteTest {$convname} was carrying {$convcloth} thread.>> 
+[[Note it down|Start]]
 ===
 title: C4Y
 tags: 
 colorID: 0
 position: 1876,62
 ---
-Success 4. You notice they are {$convhand}-handed.
-<<DialogueCommand_AddNoteTest {$convname} is {$convhand}-handed.>> 
-[[Success 4.|Start]]
+You ask to sit alongside them, and they oblige. After a time, you subtly extract traces of {$convcloth} fibres on their coat.
+<<DialogueCommand_AddNoteTest {$convname} was carrying {$convcloth} thread.>> 
+[[Excuse yourself|Start]]
 ===
 title: D4N
 tags: 
