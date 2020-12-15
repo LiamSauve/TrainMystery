@@ -181,7 +181,7 @@ namespace TrainMystery
             uiCommands.ShowShootInput(false);
             uiCommands.ShowTimer(false);
 
-            gameOver.Begin_TimeOut();
+            gameOver.Begin_TimeOut(murderer);
         }
 
         public void GameOver_Success(string murdererName)

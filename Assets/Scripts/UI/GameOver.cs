@@ -41,12 +41,14 @@ namespace TrainMystery
             base.Update();
         }
 
-        public void Begin_TimeOut()
+        public void Begin_TimeOut(string murdererName)
         {
             gameOverType = GameOverType.timeout;
             gameObject.SetActive(true);
 
-            gameOverText.text = FailureText;
+            var t = string.Format(FailureText, murdererName);
+            gameOverText.text = t;
+
             Blackout();
         }
 
