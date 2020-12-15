@@ -16,10 +16,10 @@ namespace TrainMystery
             dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
             variableStorage = dialogueRunner.GetComponent<InMemoryVariableStorage>();
             characterData = dialogueRunner.GetComponent<CharacterData>();
-            //if (yarnProgram != null)
-            //{
-            //    dialogueRunner.Add(yarnProgram);
-            //}
+            if (yarnProgram != null)
+            {
+                dialogueRunner.Add(yarnProgram);
+            }
         }
 
         public override void Interact()

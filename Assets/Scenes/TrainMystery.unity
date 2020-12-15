@@ -4252,8 +4252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 14
 --- !u!136 &223832738
 CapsuleCollider:
@@ -6253,8 +6252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 0
 --- !u!136 &316650332
 CapsuleCollider:
@@ -7077,7 +7075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
-  startNode: Start
+  startNode: Start.Nyxin
   yarnProgram: {fileID: 2480198943629176163, guid: 8f4ec2de83885394ba994d02f735a6ff,
     type: 3}
   charID: 13
@@ -7205,8 +7203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 25
 --- !u!136 &371426788
 CapsuleCollider:
@@ -7429,8 +7426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 24
 --- !u!136 &372212273
 CapsuleCollider:
@@ -8002,8 +7998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 16
 --- !u!136 &425283529
 CapsuleCollider:
@@ -12683,8 +12678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 19
 --- !u!136 &841231359
 CapsuleCollider:
@@ -12798,8 +12792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 1
 --- !u!136 &842574492
 CapsuleCollider:
@@ -14655,8 +14648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 17
 --- !u!136 &1008393308
 CapsuleCollider:
@@ -16071,8 +16063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 23
 --- !u!136 &1122192245
 CapsuleCollider:
@@ -16801,8 +16792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 3
 --- !u!136 &1213780487
 CapsuleCollider:
@@ -17286,8 +17276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 12
 --- !u!136 &1285763961
 CapsuleCollider:
@@ -17522,8 +17511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 2
 --- !u!136 &1312271168
 CapsuleCollider:
@@ -19728,8 +19716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 7
 --- !u!136 &1481026869
 CapsuleCollider:
@@ -20430,8 +20417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 4
 --- !u!136 &1570824467
 CapsuleCollider:
@@ -23070,8 +23056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 11
 --- !u!136 &1771343910
 CapsuleCollider:
@@ -23282,8 +23267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 22
 --- !u!136 &1800378478
 CapsuleCollider:
@@ -23519,8 +23503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 20
 --- !u!136 &1843690868
 CapsuleCollider:
@@ -23665,8 +23648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 18
 --- !u!136 &1866781090
 CapsuleCollider:
@@ -24603,8 +24585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 10
 --- !u!136 &1967649981
 CapsuleCollider:
@@ -24781,8 +24762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 15
 --- !u!1 &2007416236
 GameObject:
@@ -25004,8 +24984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 9
 --- !u!136 &2028220359
 CapsuleCollider:
@@ -25447,8 +25426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 5
 --- !u!136 &2052141608
 CapsuleCollider:
@@ -25666,7 +25644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 2153203688864159864}
-  characterData: {fileID: 0}
+  characterData: {fileID: 2153203688864159873}
 --- !u!1 &2061804054
 GameObject:
   m_ObjectHideFlags: 0
@@ -25716,8 +25694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 6
 --- !u!136 &2061804057
 CapsuleCollider:
@@ -26002,8 +25979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseWhenGameIsPaused: 1
   startNode: Start
-  yarnProgram: {fileID: 2480198943629176163, guid: f59e063e941ca8a4ca61f4ded23dd1e5,
-    type: 3}
+  yarnProgram: {fileID: 0}
   charID: 8
 --- !u!136 &2075028554
 CapsuleCollider:
